@@ -1,16 +1,16 @@
-FROM registry.access.redhat.comubi8ubi8.1
+FROM registry.access.redhat.com/ubi8/ubi:8.1
 
-RUN yum --disableplugin=subscription-manager -y module enable php7.3 
-  && yum --disableplugin=subscription-manager -y install httpd php 
+RUN yum --disableplugin=subscription-manager -y module enable php:7.3 \
+  && yum --disableplugin=subscription-manager -y install httpd php \
   && yum --disableplugin=subscription-manager clean all
 
-ADD index.php varwwwhtml
+ADD index.php /var/www/html
 
-RUN sed -i 'sListen 80Listen 8080' etchttpdconfhttpd.conf 
-  && sed -i 'slisten.acl_users = apache,nginxlisten.acl_users =' etcphp-fpm.dwww.conf 
-  && mkdir runphp-fpm 
-  && chgrp -R 0 varloghttpd varrunhttpd runphp-fpm 
-  && chmod -R g=u varloghttpd varrunhttpd runphp-fpm
+RUN sed -i 's/Listen 80/Listen 8080/' /etc/httpd/conf/httpd.conf \
+  && sed -i 's/listen.acl_users = apache,nginx/listen.acl_users =/' /etc/php-fpm.d/www.conf \
+  && mkdir /run/php-fpm \
+  && chgrp -R 0 /var/log/httpd /var/run/httpd /run/php-fpm \
+  && chmod -R g=u /var/log/httpd /var/run/httpd /run/php-fpm
 
 EXPOSE 8080
 USER 1001
