@@ -1,0 +1,293 @@
+<?
+require_once("../includes/lib.php");
+//nueva version
+if (!empty($_GET['tipo'])) {
+	switch($_GET['tipo']) {
+	case 'desregistro':
+		if (!empty($_GET['numero'])) {
+				$Sql="Select REG_DESCRIP, REG_TIPO
+					    From REG_AUTOM
+					   where REG_COD_INT=".sqlstring($_GET['numero']);		  
+				$rs = $conn->execute($Sql);
+				 if (!$rs->EOF) {
+				  	echo utf8_encode($rs->fields["REG_DESCRIP"])."|".
+				  	     $rs->fields["REG_TIPO"];					
+				 }else{ 
+				  	echo "Inexistente";
+				 }
+		}//if vino parametro eleccion
+		break;
+	case 'grabar':	
+			$conn->StartTrans();
+			try {			
+				$Sql="select REG_CODIGO from REG_AUTOM where REG_COD_INT=".sqlstring($_GET['regOrigen']);			
+				$rs = $conn->Execute($Sql);		
+				$id_origen=$rs->fields["REG_CODIGO"];		
+//echo "<br>".$Sql;										  				
+				$Sql="select REG_CODIGO from REG_AUTOM where REG_COD_INT=".sqlstring($_GET['regDestino']);							
+				$rs = $conn->Execute($Sql);				
+				$id_destino=$rs->fields["REG_CODIGO"];		
+//echo "<br>".$Sql;										  								
+				$tmp = new Date($_GET["FecRetiro"]);
+				$Sql="Insert into TRAMITE (TRA_CODIGO,
+										   TRA_FECHA_RETIRO,
+										   REG_CODIGO_ORI,
+										   REG_CODIGO_DES,
+										   TRA_DOMINIO,
+										   TRA_NRO_VOUCHER, 
+										   TRA_FECHA_CARGA, 
+										   USR_ID_CARGA
+										  )
+								   VALUES (".sqlint(numerador('TRAMITE')).",
+										   ".sqldate($tmp->format(FMT_DATE_ISO)).",
+										   ".sqlint($id_origen).", 
+										   ".sqlint($id_destino).", 										   
+										   ".sqlstring($_GET['NroTramite']).",								   								   
+										   ".sqlstring(sprintf("%08s", $_GET['NroVoucher'])).",
+										   ".sqldate(dbtime()).", 
+										   ".sqlint($_GET['usuario'])."								   								   								   
+										  )";
+//echo "<br>".$Sql;										  
+				$rs = $conn->Execute($Sql);
+				echo 'ok';
+			} catch (exception $e) {
+				dbhandleerror($e);
+			}				
+			$conn->CompleteTrans();
+		break;
+	case 'buscar':
+		if ((!empty($_GET['NroTramite']))||(!empty($_GET['NroVoucher']))) {
+				$Sql="Select a.TRA_CODIGO, 
+							 ".$conn->SQLDate(FMT_DATE_DB, "a.TRA_FECHA_RETIRO")." as TRA_FECHA_RETIRO,	
+							 a.REG_CODIGO_ORI,
+							 a.REG_CODIGO_DES,
+							 b.REG_DESCRIP as DES_ORIGEN,
+							 c.REG_DESCRIP as DES_DESTINO,
+							 ".$conn->SQLDate(FMT_DATE_DB, "a.TRA_FECHA_ENTREGA")." as TRA_FECHA_ENTREGA,
+							 a.MOT_CODIGO, 
+							 a.TRA_DOMINIO,
+							 a.TRA_NRO_VOUCHER,
+							 a.REM_ID_ORI 
+					    From TRAMITE a
+				  inner join REG_AUTOM b on a.REG_CODIGO_ORI = b.REG_CODIGO
+				  inner join REG_AUTOM c on a.REG_CODIGO_DES = c.REG_CODIGO
+					   where a.TRA_DOMINIO=".sqlstring($_GET['NroTramite'])." 
+					      or a.TRA_NRO_VOUCHER=".sqlstring(sprintf("%08s", $_GET['NroVoucher']))."
+					order by a.TRA_FECHA_RETIRO desc";		  
+//echo $Sql;					   
+				$rs = $conn->execute($Sql);
+				if ($rs->EOF) { echo "Inexistente"; }else
+				{
+					$Sql="Select a.TRA_CODIGO, 
+							 ".$conn->SQLDate(FMT_DATE_DB, "a.TRA_FECHA_RETIRO")." as TRA_FECHA_RETIRO,	
+							 a.REG_CODIGO_ORI,
+							 a.REG_CODIGO_DES,
+							 b.REG_DESCRIP as DES_ORIGEN,
+							 c.REG_DESCRIP as DES_DESTINO,
+							 ".$conn->SQLDate(FMT_DATE_DB, "a.TRA_FECHA_ENTREGA")." as TRA_FECHA_ENTREGA,
+							 a.MOT_CODIGO, 
+							 a.TRA_DOMINIO,
+							 a.TRA_NRO_VOUCHER,
+							 a.REM_ID_ORI 
+					    From TRAMITE a
+				  inner join REG_AUTOM b on a.REG_CODIGO_ORI = b.REG_CODIGO
+				  inner join REG_AUTOM c on a.REG_CODIGO_DES = c.REG_CODIGO
+					   where a.TRA_FECHA_ENTREGA IS NOT NULL and 
+					   a.TRA_DOMINIO=".sqlstring($_GET['NroTramite'])." 
+					      or a.TRA_NRO_VOUCHER=".sqlstring(sprintf("%08s", $_GET['NroVoucher']))."
+					order by a.TRA_FECHA_RETIRO desc";		  
+//echo $Sql;					   
+					$rs = $conn->execute($Sql);
+					if ($rs->EOF) { echo "Sin fecha"; }
+				while (!$rs->EOF) {
+				  	echo $rs->fields["TRA_CODIGO"].";".
+				  	     rtrim($rs->fields["REG_CODIGO_ORI"]).";".
+					     utf8_encode($rs->fields["DES_ORIGEN"]).";".
+					     rtrim($rs->fields["REG_CODIGO_DES"]).";".
+					     utf8_encode($rs->fields["DES_DESTINO"]).";".
+					     $rs->fields["TRA_FECHA_RETIRO"].";".
+					     $rs->fields["TRA_FECHA_ENTREGA"].";".
+					     $rs->fields["MOT_CODIGO"].";".
+					     $rs->fields["TRA_DOMINIO"].";".
+					     $rs->fields["TRA_NRO_VOUCHER"].";".						 						 
+					     $rs->fields["REM_ID_ORI"]."|";						 
+					$rs->movenext();						 
+				}//fin while
+				}
+		}//if vino parametro eleccion
+		break;	
+	case 'buscarxid':
+		if (!empty($_GET['traCodigo'])) {
+				$Sql="Select a.TRA_CODIGO, 
+						     a.TRA_DOMINIO, 
+							 ".$conn->SQLDate(FMT_DATE_DB, "a.TRA_FECHA_RETIRO")." as TRA_FECHA_RETIRO,	
+							 b.REG_COD_INT as COD_INT_ORIGEN,
+							 c.REG_COD_INT as COD_INT_DESTINO,							 
+							 b.REG_DESCRIP as DES_ORIGEN,
+							 c.REG_DESCRIP as DES_DESTINO,
+							 ".$conn->SQLDate(FMT_DATE_DB, "a.TRA_FECHA_ENTREGA")." as TRA_FECHA_ENTREGA,
+							 a.MOT_CODIGO,
+							 a.TRA_NRO_VOUCHER,
+							 a.REM_ID_ORI,							 
+							 a.REM_ID_DES,
+							 ".$conn->SQLDate(FMT_DATE_DB, "d.REM_FECHA_CIERRE")." as TRA_FECHA_CIERRE 
+					    From TRAMITE a
+				  inner join REG_AUTOM b on a.REG_CODIGO_ORI = b.REG_CODIGO
+				  inner join REG_AUTOM c on a.REG_CODIGO_DES = c.REG_CODIGO
+				  left  join REMITO d    on a.REM_ID_ORI = d.REM_ID 
+					   where a.TRA_CODIGO=".sqlint($_GET['traCodigo']);		  
+//echo $Sql;					   
+				$rs = $conn->execute($Sql);
+				if ($rs->EOF) { echo "Inexistente";
+				}else{
+				  	echo $rs->fields["TRA_CODIGO"].";".
+				  	     rtrim($rs->fields["COD_INT_ORIGEN"]).";".
+					     utf8_encode($rs->fields["DES_ORIGEN"]).";".
+					     rtrim($rs->fields["COD_INT_DESTINO"]).";".
+					     utf8_encode($rs->fields["DES_DESTINO"]).";".						 						 
+					     $rs->fields["TRA_FECHA_RETIRO"].";".
+					     $rs->fields["TRA_FECHA_ENTREGA"].";".
+					     $rs->fields["MOT_CODIGO"].";".
+					     rtrim($rs->fields["TRA_DOMINIO"]).";".						 
+					     $rs->fields["TRA_NRO_VOUCHER"].";".						 
+					     $rs->fields["REM_ID_ORI"].";".						 						 
+					     $rs->fields["REM_ID_DES"].";".						 
+					     $rs->fields["TRA_FECHA_CIERRE"];						 						 
+				}
+		}//if vino parametro eleccion
+		break;				
+	case 'modificar':	
+			$conn->StartTrans();
+			try {		
+				$Sql="select REG_CODIGO from REG_AUTOM where REG_COD_INT=".sqlstring($_GET['regOrigen']);			
+				$rs = $conn->Execute($Sql);		
+				$id_origen=$rs->fields["REG_CODIGO"];		
+//echo "<br>".$Sql;										  				
+				$Sql="select REG_CODIGO from REG_AUTOM where REG_COD_INT=".sqlstring($_GET['regDestino']);							
+				$rs = $conn->Execute($Sql);				
+				$id_destino=$rs->fields["REG_CODIGO"];		
+//echo "<br>".$Sql;										  								
+				$fecretiro     = new Date($_GET["FecRetiro"]);
+				$fecentrega    = new Date($_GET["FecEntrega"]);
+				$Sql="update TRAMITE set  TRA_FECHA_RETIRO=".sqldate($fecretiro->format(FMT_DATE_ISO)).",
+										  REG_CODIGO_ORI=".sqlint($id_origen).",
+										  REG_CODIGO_DES=".sqlint($id_destino).",
+										  TRA_DOMINIO=".sqlstring($_GET['NroTramite']).",
+										  TRA_NRO_VOUCHER=".sqlstring(sprintf("%08s", $_GET['NroVoucher'])).",										  										  
+										  TRA_FECHA_ENTREGA=".($_GET["FecEntrega"]!="" ? sqldate($fecentrega->format(FMT_DATE_ISO)) : 'null').",
+										  MOT_CODIGO=".($_GET["MotDevolucion"]!="0" ? sqlstring($_GET['MotDevolucion']) : 'null').",
+										  TRA_FECHA_ACT=".sqldate(dbtime()).", 
+										  USR_ID_ACT=".sqlint($_GET['usuario'])."
+								where TRA_CODIGO=".sqlint($_GET['idregmod']);
+//echo $Sql;								
+				$rs = $conn->Execute($Sql);
+				echo 'ok';
+			} catch (exception $e) {
+				dbhandleerror($e);
+			}				
+			$conn->CompleteTrans();
+		break;		
+	case 'verificar':
+				$out="";
+				$fecretiro     = new Date($_GET["FecRetiro"]);	
+				$Sql="SELECT a.tra_codigo
+						FROM   TRAMITE a 
+						INNER JOIN REG_AUTOM b ON a.reg_codigo_ori = b.reg_codigo AND b.reg_cod_int = ".sqlstring($_GET['regOrigen'])." 
+						INNER JOIN REG_AUTOM c ON a.reg_codigo_des = c.reg_codigo AND c.reg_cod_int = ".sqlstring($_GET['regDestino'])." 
+						WHERE a.tra_dominio = ".sqlstring($_GET['NroTramite'])." AND 
+							  a.tra_fecha_retiro =".sqldate($fecretiro->format(FMT_DATE_ISO));
+				$rs = $conn->execute($Sql);
+				$out= (!$rs->EOF ?  "existe|" : "no|");
+				$Sql="Select TRA_CODIGO
+					    From TRAMITE
+					   where TRA_NRO_VOUCHER=".sqlstring(sprintf("%08s", $_GET['NroVoucher']));						 
+				$rs = $conn->execute($Sql);
+				$out.= (!$rs->EOF ?  "existe" : "no");				
+				echo $out;				
+		break;
+	case 'verificar2':
+				$Sql="Select TRA_CODIGO
+					    From TRAMITE
+					   where TRA_NRO_VOUCHER=".sqlstring(sprintf("%08s", $_GET['NroVoucher'])).
+					   " and TRA_CODIGO!=".sqlint($_GET['idtramite']);						 
+				$rs = $conn->execute($Sql);
+				echo (!$rs->EOF ?  "voucher" : "no")."|";
+				$fecretiro     = new Date($_GET["FecRetiro"]);									
+				$Sql="Select a.TRA_CODIGO
+					    From TRAMITE a
+						WHERE a.tra_dominio = ".sqlstring($_GET['NroTramite'])." AND 
+							  a.tra_fecha_retiro =".sqldate($fecretiro->format(FMT_DATE_ISO))." AND 
+							  a.tra_codigo!=".sqlint($_GET['idtramite']);
+				$rs = $conn->execute($Sql);
+				echo (!$rs->EOF ?  "tramite" : "no")."|";				
+		break;
+	 case 'remito':
+				$Sql="SELECT  a.rem_id, a.rem_estado, 
+							 ".$conn->SQLDate(FMT_DATE, "a.rem_fecha_generacion")." as rem_fecha_generacion 
+						FROM  REMITO a 
+						WHERE a.rem_numero = ".sqlint($_GET['remDestino'])." AND 
+							  a.rem_tipo = '".DESTINO."'";
+				$rs = $conn->execute($Sql);
+//				echo $Sql;
+				if($rs->EOF) { echo "inexistente";
+				}else{
+					echo $rs->fields["rem_id"]."|".
+					     $rs->fields["rem_estado"]."|".
+						 $rs->fields["rem_fecha_generacion"];					
+				}
+	    break;						
+	 case 'fecentrega': 
+		if ($_GET['idremito']!="")	  {
+			$conn->StartTrans();
+			try {				
+	       
+				$Sql="UPDATE  REMITO
+						SET   rem_nombre_conformidad = ".sqlstring($_GET['conformidad']).", REM_ESTADO=".sqlstring(ENTREGADO). 
+						"WHERE rem_id = ".sqlint($_GET['idremito']);
+				$conn->execute($Sql);						
+	 		
+				$fecentrega     = new Date($_GET["FecEntrega"]);			
+				$Sql="UPDATE TRAMITE 
+					     SET TRA_FECHA_ENTREGA=".($_GET["FecEntrega"]!="" ? sqldate($fecentrega->format(FMT_DATE_ISO)) : 'null')." 
+						WHERE rem_id_des = ".sqlint($_GET['idremito']);
+				$conn->execute($Sql);				
+				
+				echo 'ok';	 
+			} catch (exception $e) {
+				dbhandleerror($e);
+			}				
+			$conn->CompleteTrans();				
+		}
+	    break;						
+	case 'devolucion':	
+			$conn->StartTrans();
+			$fecentrega     = new Date(date('Y/m/d'));				
+			try {		
+				$Sql="select REM_ID_ORI, REM_ID_DES
+				        from TRAMITE
+					   where TRA_CODIGO=".sqlint($_GET['idtramite'])." and TRA_FECHA_ENTREGA IS NOT NULL";
+				$rs = $conn->Execute($Sql);			    
+				if($rs->EOF){echo("Sin fecha de entrega");}
+				else
+				{
+					if($rs->fields["REM_ID_DES"]=="") {
+						echo 'Sin Remito Destino';
+					}else{
+						$Sql="update TRAMITE set  MOT_CODIGO=".($_GET["MotDevolucion"]!="0" ? sqlstring($_GET['MotDevolucion']) : 'null').",
+											  TRA_FECHA_ENTREGA=".sqldate($fecentrega ->format(FMT_DATE_ISO)).", 
+											  USR_ID_ENT_DEV=".sqlint($_GET['usuario'])."
+									where TRA_CODIGO=".sqlint($_GET['idtramite']);
+//echo $Sql;								
+						$conn->Execute($Sql);
+						echo 'ok';
+					}
+				}	
+			} catch (exception $e) {
+				dbhandleerror($e);
+			}				
+			$conn->CompleteTrans();
+		break;		
+	}//switch		
+}//if (!empty($tipo))	
+
+?>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report Name="Trámites Generales" MarginTop="10" MarginBottom="10">
+	<PageHeader Height="35">
+			<ReportGraphic PSFunction="logocorreo"
+				X="0" Y="0" Width="40" Height="12" />
+			<ReportLabel Text="AAERPA" Align="RPT_ALIGN_CENTER"
+				X="0" Y="7" Width="190" Height="5"
+				FontSize="10" FontStyle="RPT_NORMAL" />
+			<ReportSysField Type="RPT_SYSDATE" FontSize="10"
+				FontStyle="RPT_NORMAL" Align="RPT_ALIGN_RIGHT"
+				Format="d/m/Y\ H:i"
+				X="140" Y="7" Width="50" Height="5" />
+			<ReportLine X="0" Y="13" Width="190" Height="0"
+				LineWidth=".05" />
+
+			<ReportLabel Text="Trámites Generales"
+				Align="RPT_ALIGN_CENTER"
+				X="0" Y="15" Width="190" Height="10"
+				FontSize="20" FontStyle="RPT_BOLDITALIC" />
+
+			<ReportLabel Text="Fecha de Carga desde:"
+				 X="0" Y="25" Width="40" Height="5"
+				 FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportLabel Text="FECDESDE"
+				 X="41" Y="25" Width="18" Height="5"
+				 FontStyle="RPT_BOLD" FontSize="10" />
+			<ReportLabel Text="al"
+				 X="60" Y="25" Width="4" Height="5"
+				 FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportLabel Text="FECHASTA"
+				 X="65" Y="25" Width="30" Height="5"
+				 FontStyle="RPT_BOLD" FontSize="10" />
+			
+	</PageHeader>
+
+	<MainGroup Field="TRA_FECHA_CARGA">
+		<GroupHeader Height="5">
+			<ReportLabel Text="Fecha de Carga:"
+				 X="0" Y="0" Width="30" Height="5"
+				 FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportField FieldName="TRA_FECHA_CARGA"
+				 X="31" Y="0" Width="18" Height="5"
+				 FontStyle="RPT_BOLD" FontSize="10" />
+			<ReportLine X="0" Y="5" Width="190" Height="0"
+				LineWidth=".2" />
+		</GroupHeader>
+
+		<GroupFooter Height="7">
+			<ReportLine X="0" Y="0" Width="190" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="Total fecha:"
+				X="0" Y="0" Width="30" Height="5"
+				FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportCalcField X="31" Y="0" Width="40" Height="5"
+				FontStyle="RPT_BOLD" FontSize="9"
+				FieldName="TRA_FECHA_CARGA" Operation="RPT_COUNT"
+				Format="%d" />
+		</GroupFooter>
+
+		<SubGroup Field="TRA_FECHA_CARGA">
+			<GroupHeader Height="5">
+				<ReportLabel Text="Fec. de Carg."
+					X="0" Y="0" Width="20" Height="4"
+					FontStyle="RPT_BOLD" FontSize="9" />
+				<ReportLabel Text="Reg. Ori."
+					X="25" Y="0" Width="20" Height="4"
+					FontStyle="RPT_BOLD" FontSize="9" />
+				<ReportLabel Text="Reg. Dest."
+					X="45" Y="0" Width="20" Height="4"
+					FontStyle="RPT_BOLD" FontSize="9" />
+				<ReportLabel Text="Tipo"
+					X="65" Y="0" Width="14" Height="4"
+					FontStyle="RPT_BOLD" FontSize="9" />
+				<ReportLabel Text="Usuario"
+				 X="85" Y="0" Width="20" Height="4"
+				 FontStyle="RPT_BOLD" FontSize="9" />
+				 <ReportLabel Text="C.P. Ori."
+				 X="115" Y="0" Width="20" Height="4"
+				 FontStyle="RPT_BOLD" FontSize="9" />
+				 <ReportLabel Text="C.P. Dest."
+				 X="135" Y="0" Width="20" Height="4"
+				 FontStyle="RPT_BOLD" FontSize="9" />
+				 <ReportLabel Text="Región Destino"
+				 X="153" Y="0" Width="25" Height="4"
+				 FontStyle="RPT_BOLD" FontSize="9" />
+				<ReportLine X="0" Y="5" Width="190" Height="0"
+					LineWidth=".2" />
+			</GroupHeader>
+
+			<GroupFooter Height="0" />
+				
+		</SubGroup>
+	</MainGroup>
+
+	<Detail Height="4">
+		<ReportField FieldName="TRA_FECHA_CARGA"
+			 X="0" Y="0" Width="25" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="REG_O"
+			 X="25" Y="0" Width="25" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="REG_D"
+			 X="45" Y="0" Width="20" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="9" />
+	  	<ReportField FieldName="REG_TIPO"
+			 X="65" Y="0" Width="20" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="USR_APELLIDO"
+			 X="85" Y="0" Width="30" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="CP_ORIGEN"
+			 X="115" Y="0" Width="20" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="CP_DESTINO"
+			 X="135" Y="0" Width="20" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="RGI_DESCRIP"
+			 X="153" Y="0" Width="30" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="9" />
+	</Detail>
+
+	<PageFooter Height="10">
+		<ReportLine X="0" Y="6" Width="190" Height="0"
+			LineWidth=".05" />
+		<ReportSysField Type="RPT_SYSPAGENO" FontSize="8"
+			FontStyle="RPT_ITALIC" Align="RPT_ALIGN_CENTER"
+			Format="Página %d"
+			X="0" Y="7" Width="190" Height="3" />
+	</PageFooter>
+
+	<ReportHeader Height="0" />
+
+	<ReportFooter Height="0" />
+</Report>

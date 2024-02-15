@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="463"
+   name=""
+   committed-date="2006-02-02T14:54:37.270194Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/adodb/perf"
+   last-author="diegog"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="463"
+   name="perf-db2.inc.php"
+   text-time="2006-05-08T14:23:00.078125Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="bc627a6578eab7c86f5e099ba7ff5117"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:59.828125Z"/>
+<entry
+   committed-rev="463"
+   name="perf-informix.inc.php"
+   text-time="2006-05-08T14:23:00.093750Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="34a954998f46110cbb12919fd8543008"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:59.906250Z"/>
+<entry
+   committed-rev="463"
+   name="perf-mssql.inc.php"
+   text-time="2006-05-08T14:23:00.140625Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="c2753818f233798ef339515a17476b38"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:59.953125Z"/>
+<entry
+   committed-rev="463"
+   name="perf-oci8.inc.php"
+   text-time="2006-05-08T14:23:00.140625Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="3aed7401fd4e29c39595a75df0ec9592"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:59.968750Z"/>
+<entry
+   committed-rev="463"
+   name="perf-mysql.inc.php"
+   text-time="2006-05-08T14:23:00.156250Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="25fe473600785089b2920c206758c37c"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:59.984375Z"/>
+<entry
+   committed-rev="463"
+   name="perf-postgres.inc.php"
+   text-time="2006-05-08T14:23:00.171875Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="fba40e251d138bf02e00126a4fc8a1b2"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:00.046875Z"/>
+</wc-entries>

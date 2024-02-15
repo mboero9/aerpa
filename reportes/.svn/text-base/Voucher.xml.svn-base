@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report Name="Voucher" MarginTop="10" MarginBottom="10">
+	<ReportHeader Height="15">
+		<ReportLabel Text="SERVICIO DE TRANSPORTE DE LEGAJOS" Align="RPT_ALIGN_LEFT"
+			X="0" Y="3" Width="190" Height="10"
+			FontSize="15" FontStyle="RPT_BOLDITALIC" />
+	</ReportHeader>
+
+	<PageHeader Height="16">
+		<ReportGraphic PSFunction="logocorreo"
+			X="0" Y="0" Width="40" Height="12" />
+		<ReportLabel Text="AERPA" Align="RPT_ALIGN_CENTER"
+			X="0" Y="7" Width="190" Height="5"
+			FontSize="10" FontStyle="RPT_NORMAL" />
+		<ReportSysField Type="RPT_SYSDATE" FontSize="10"
+			FontStyle="RPT_NORMAL" Align="RPT_ALIGN_RIGHT"
+			Format="d/m/Y\ H:i"
+			X="140" Y="7" Width="50" Height="5" />
+		<ReportLine X="0" Y="13" Width="190" Height="0"
+			LineWidth=".05" />
+	</PageHeader>
+
+	<MainGroup>
+		<GroupHeader Height="15">
+			<ReportLabel Text="USO EXCLUSIVO REGISTROS SECCIONALES DE LA PROPIEDAD DEL AUTOMOTOR"
+				X="0" Y="0" Width="190" Height="5"
+				FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportLabel Text="LA CONSTANCIA DE ENTREGA FIGURA EN EL REMITO:"
+				X="0" Y="5" Width="139" Height="5"
+				FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportField FieldName="REM_NUMERO"
+				X="100" Y="5" Width="10" Height="5"
+				FontStyle="RPT_BOLD" FontSize="10" />
+			
+			<ReportLabel Text="REGISTRO DE ORIGEN"
+				X="0" Y="15" Width="40" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="CODIGO POSTAL DE ORIGEN"
+				X="45" Y="15" Width="50" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLine X="0" Y="20" Width="190" Height="0"
+				LineWidth=".2" />
+			<ReportLine X="0" Y="35" Width="120" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="REGISTRO DE DESTINO"
+				X="100" Y="15" Width="40" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="CODIGO POSTAL DE DESTINO"
+				X="140" Y="15" Width="50" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="FECHA DE RETIRO"
+				X="0" Y="30" Width="40" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="FECHA DE ENTREGA"
+				X="45" Y="30" Width="40" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="NUMERO DE DOMINIO"
+				X="85" Y="30" Width="40" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLine X="5" Y="100" Width="80" Height="0"
+				LineWidth=".2" />
+			<ReportLine X="100" Y="100" Width="80" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="REGISTRO ORIGEN - FIRMA Y ACLARACIÓN"
+				X="10" Y="105" Width="80" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="REGISTRO DESTINO - FIRMA Y ACLARACIÓN"
+				X="110" Y="105" Width="80" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+													
+			<ReportLine X="120" Y="50" Width="69" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="| MARCAR CON 'X' DONDE CORRESPONDA "
+				X="120" Y="51" Width="70" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLine X="120" Y="55" Width="69" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="| ACOMPAÑA LEGAJO     SI:       NO:               "
+				X="120" Y="56" Width="70" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLine X="120" Y="61" Width="69" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="| PIDE POR 04"
+				X="120" Y="62" Width="70" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLine X="120" Y="67" Width="69" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="| RECLAMA POR CORRESPONDER"
+				X="120" Y="68" Width="70" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLine X="120" Y="73" Width="69" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="| RESPONDE AL 04 SIN"
+				X="120" Y="74" Width="70" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="| ACOMPAÑAR EL LEGAJO"
+				X="120" Y="79" Width="70" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLine X="120" Y="84" Width="69" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="|OTROS"
+				X="120" Y="85" Width="70" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="189" Y="51" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="189" Y="56" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="189" Y="62" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="189" Y="68" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="189" Y="74" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="189" Y="79" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="189" Y="85" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="179" Y="62" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="179" Y="68" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="179" Y="74" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="179" Y="79" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="179" Y="85" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="174" Y="62" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="174" Y="68" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="174" Y="74" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="174" Y="79" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="174" Y="85" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="1"
+				X="184" Y="62" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="2"
+				X="184" Y="68" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="3"
+				X="184" Y="74" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="4"
+				X="184" Y="85" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="120" Y="55" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="|"
+				X="189" Y="55" Width="2" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+				
+			<ReportLine X="120" Y="90" Width="69" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="ORIGINAL ACUSE FIRMADO PARA EL REGISTRO DE ORIGEN LUEGO DE ENTREGAR LA DOCUMENTACION EN EL REGISTRO DESTINO"
+				X="0" Y="121" Width="190" Height="5"
+				FontStyle="RPT_NORMAL" FontSize="8" />			
+			<ReportLine X="0" Y="119" Width="190" Height="0"
+				LineWidth=".2" />
+	
+		</GroupHeader>
+
+		<GroupFooter Height="7">
+		</GroupFooter>
+	</MainGroup>
+
+	<Detail Height="4">
+		<ReportField FieldName="N_ORIGEN"
+			X="10" Y="5" Width="25" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="CP_ORIGEN"
+			X="55" Y="5" Width="25" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="N_DESTINO"
+			X="105" Y="5" Width="39" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="CP_DESTINO"
+			X="150" Y="5" Width="39" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="TRA_FECHA_RETIRO"
+			X="5" Y="20" Width="39" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="TRA_FECHA_ENTREGA"
+			X="50" Y="20" Width="39" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="TRA_DOMINIO"
+			X="95" Y="20" Width="39" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="TRA_NRO_VOUCHER"
+			X="170" Y="100" Width="39" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="12" />
+		<ReportCodeBar FieldName="TRA_NRO_VOUCHER" />	
+											
+	</Detail>
+
+</Report>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="670"
+   name=""
+   committed-date="2006-05-05T14:29:58.250289Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/includes"
+   last-author="gustavom"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   prop-time="2006-05-08T14:22:51.859375Z"
+   revision="673"/>
+<entry
+   committed-rev="585"
+   name="funciones.php"
+   text-time="2006-05-08T14:22:51.875000Z"
+   committed-date="2006-03-08T17:32:00.885691Z"
+   checksum="2052bc25fae528c3f2d561c35747b681"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.156250Z"/>
+<entry
+   committed-rev="520"
+   name="fecha.js"
+   text-time="2006-05-08T14:22:51.890625Z"
+   committed-date="2006-02-13T21:18:06.826363Z"
+   checksum="43f3fedf6c2b28e2d84aad9aa040d65d"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.187500Z"/>
+<entry
+   committed-rev="589"
+   name="inc_top.php"
+   text-time="2006-05-08T14:22:51.875000Z"
+   committed-date="2006-03-15T15:04:30.717105Z"
+   checksum="1d35ff5206243b090d6caf46e4b90cea"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.171875Z"/>
+<entry
+   committed-rev="463"
+   name="inc_bottom.php"
+   text-time="2006-05-08T14:22:51.906250Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="bdac40efe8c6b00083d78086de32962c"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.203125Z"/>
+<entry
+   committed-rev="656"
+   name="inc_functions.php"
+   text-time="2006-05-08T14:22:51.906250Z"
+   committed-date="2006-04-28T13:55:21.893687Z"
+   checksum="727c6c1e7468226c71ee8d79f1fecb1d"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.218750Z"/>
+<entry
+   committed-rev="670"
+   name="inc_constants.php"
+   text-time="2006-05-08T14:22:51.921875Z"
+   committed-date="2006-05-05T14:29:58.250289Z"
+   checksum="564b3311bd42fd399f4bcbf5c5c4b747"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.234375Z"/>
+<entry
+   committed-rev="483"
+   name="lib.php"
+   text-time="2006-05-08T14:22:51.953125Z"
+   committed-date="2006-02-07T13:13:33.361138Z"
+   checksum="697746b90dcd1a2ec568aac3f218f0f7"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.265625Z"/>
+<entry
+   committed-rev="580"
+   name="inc_topleft.php"
+   text-time="2006-05-08T14:22:51.937500Z"
+   committed-date="2006-03-06T20:52:50.838031Z"
+   checksum="4021fdbdf2eb3681aaec1aa83abd7087"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.250000Z"/>
+<entry
+   committed-rev="461"
+   name="inc_date.php"
+   text-time="2006-05-08T14:22:51.937500Z"
+   committed-date="2006-02-01T20:07:44.041410Z"
+   checksum="387eabe838679f9bbe1bb90f24dc3a91"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.234375Z"/>
+<entry
+   committed-rev="604"
+   name="wz_dragdrop.js"
+   text-time="2006-05-08T14:22:51.968750Z"
+   committed-date="2006-04-10T18:54:47.763797Z"
+   checksum="f345e2318e9efdcb652049b67d29c3ce"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.265625Z"/>
+<entry
+   committed-rev="598"
+   name="inc_titulo.php"
+   text-time="2006-05-08T14:22:51.984375Z"
+   committed-date="2006-04-04T19:12:38.558690Z"
+   checksum="3e6eb64a09f47f9a3111f9a10f6c3e3b"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.328125Z"/>
+<entry
+   committed-rev="503"
+   name="inc_header.php"
+   text-time="2006-05-08T14:22:51.984375Z"
+   committed-date="2006-02-08T19:20:13.528000Z"
+   checksum="25ab117712d4036dabb2b83224041725"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.343750Z"/>
+<entry
+   committed-rev="463"
+   name="inc_sqlwrap.php"
+   text-time="2006-05-08T14:22:52.000000Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="7aeb3b84e1ee1883895e5297a3310c8f"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.406250Z"/>
+<entry
+   committed-rev="627"
+   name="inc_left.php"
+   text-time="2006-05-08T14:22:52.015625Z"
+   committed-date="2006-04-20T17:00:25.803877Z"
+   checksum="2aa6c466d9294b73bea541d2b36909d0"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.421875Z"/>
+<entry
+   committed-rev="593"
+   name="inc_print.php"
+   text-time="2006-05-08T14:22:52.015625Z"
+   committed-date="2006-03-31T19:11:49.640698Z"
+   checksum="69f917f33b2f61c0723bb6989d1360dc"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.437500Z"/>
+<entry
+   committed-rev="653"
+   name="db.php"
+   text-time="2006-05-08T14:22:52.031250Z"
+   committed-date="2006-04-27T20:10:07.700003Z"
+   checksum="8242f8cef00bbe7e1700e46330f8bdf6"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.468750Z"/>
+<entry
+   committed-rev="456"
+   name="ajaxobjt.js"
+   text-time="2006-05-08T14:22:52.046875Z"
+   committed-date="2006-01-31T17:10:27.369061Z"
+   checksum="4a7e09c28d8f50c734dc120f9f329e49"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.484375Z"/>
+<entry
+   committed-rev="488"
+   name="inc_grabado.php"
+   text-time="2006-05-08T14:22:52.062500Z"
+   committed-date="2006-02-07T21:06:13.235573Z"
+   checksum="d0db53164e978056899121b0d9227ec1"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.718750Z"/>
+<entry
+   committed-rev="463"
+   name="inc_checkauth.php"
+   text-time="2006-05-08T14:22:52.062500Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="9175717d743633dbf56c2070806883ec"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:51.734375Z"/>
+</wc-entries>

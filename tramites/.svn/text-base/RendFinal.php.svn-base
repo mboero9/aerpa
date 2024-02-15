@@ -1,0 +1,181 @@
+<?php
+require_once("../includes/lib.php");
+if (check_auth($usrid, $perid) && check_permission($permiso)) {
+/* Cierre Rendicion Final */
+?>
+<head>
+<?php require_once("../includes/inc_header.php"); ?>
+<script type="text/javascript">
+function ValidarForm()
+{
+	var ok=true;
+	var errores="";
+	nro = new RegExp("^[0-9]*$","i");
+	var nombre = new RegExp("^[a-z ]*$","i");
+	if(document.getElementById('nro_rem').value=="")
+	{
+		
+		errores +="--No ha introducido el número de Remito Origen.\n";
+		ok=false;
+		
+	}
+	if(document.getElementById('fecha_cierre').value=="")
+	{
+		errores +="--No ha introducido la Fecha de Cierre.\n";
+		ok=false;
+		
+	}
+	if(!parseDate(document.cierre.fecha_cierre,'%d/%m/%Y',true)) 
+	{
+						
+			errores += "-- El Formato de la Fecha  de Cierre no es Valido.\n";
+			ok = false;
+												
+	}
+	if(!nro.test(document.getElementById('nro_rem').value))
+	{
+		errores +="--El número de Remito contiene caracteres invalidos.\n ";
+		ok=false;
+		
+	}
+	if(!nombre.test(document.getElementById('responsable').value))
+	{
+		errores +="--El campo Responsable contiene caracteres invalidos.\n ";
+		ok=false;
+		
+	}
+	
+	if(!ok)
+	{
+		alert(errores);
+	}
+	
+	return ok;
+}//Cierro Validar Form
+</script>
+<script type="text/javascript" language="JavaScript" src="../includes/fecha.js"></script>
+<style type="text/css">@import url(../calendar/calendar-win2k-1.css);</style>
+<script type="text/javascript" src="../calendar/calendar.js"></script>
+<script type="text/javascript" src="../calendar/lang/calendar-es.js"></script>
+<script type="text/javascript" src="../calendar/calendar-setup.js"></script>
+</head>
+<body onLoad="document.cierre.nro_rem.focus();">
+<? require_once("../includes/inc_topleft.php"); 
+/* Contenido */
+$opcion=$_POST['opcion'];
+$pagina="RendFinal.php";
+require_once('../includes/inc_titulo.php');
+?>
+<br>
+<form name="cierre" action="RendFinal.php" method="post" onSubmit="return (ValidarForm());">
+<table align="center" class="tablaconbordes" width="30%">
+<tr>
+<td align="center" class="celdatexto">Número de remito ORIGEN:</td>
+<td align="center"><input type="text" id="nro_rem" name="nro_rem" maxlength="15" size="15"></td>
+</tr>
+<tr>
+<td align="center" class="celdatexto">Fecha de Cierre:</td>
+<td align="center">
+<input type="text" id="fecha_cierre" name="fecha_cierre" maxlength="10" size="15" onBlur="parseDate(this,'<?php echo(FMT_DATE_CAL); ?>',true);">
+</td>
+<td align="center"><img src="../imagenes/calendario.png" name="selfecha2" id="selfecha2" title="Calendario" alt="" style="cursor:pointer;"></td>
+</tr>
+<tr>
+<td align="center" class="celdatexto">Responsable:</td>
+<td align="center"><input type="text" id="responsable" name="responsable" maxlength="30" size="15"></td>
+</tr>
+<tr>
+<td align="center" colspan="3"><input type="submit" class="botonout" value=<?=CONFIRMO ?> name="Confirmar" onMouseOver="this.className = 'botonover';" onMouseOut="this.className = 'botonout';"></td>
+</tr>
+</table>
+</form>
+<script type="text/javascript">
+	Calendar.setup( { inputField: "fecha_cierre", ifFormat: "%d/%m/%Y", button: "selfecha2" } );
+			
+</script>
+</body>
+<?php
+
+if(!empty($_POST['nro_rem']))
+{
+	$conn->StartTrans();
+	try
+	{
+		$sql="SELECT r.rem_numero,r.rem_estado,".$conn->SQLDate(FMT_DATE_DB,"r.rem_fecha_generacion"). " as rem_fecha_generacion from remito r where r.rem_numero=".sqlint($_POST['nro_rem'])." and r.rem_tipo='".ORIGEN."' and r.rem_fecha_cierre is null";
+		
+		$rs = $conn->execute($sql);
+		
+		if(!$rs->EOF)
+		{
+			if($rs->fields['rem_estado']==ANULADO)
+			{
+				?>
+					<table align="center" class="tablaconbordes" width="40%">
+					<tr>
+					<td class="textoerror" align="center">El remito se encuentra anulado</td>
+					</tr>
+					</table>
+				<?
+			
+			}
+			else
+			{
+				$dif = compara_fechas($_POST['fecha_cierre'],$rs->fields['rem_fecha_generacion']);
+				
+				if($dif !=1 && $dif !=3)
+				{
+					?>
+					<table align="center" width="80%%" class="tablaconbordes">
+					<tr>
+					<td align="center" class="textoerror">La fecha de cierre es inferior a la fecha de generacion del Remito.</td>
+					</tr>
+					</table>
+					<?php
+				
+				}
+				else
+				{
+					$tmp1 = new Date($_POST['fecha_cierre']);
+				$sql="UPDATE remito 
+					set rem_fecha_cierre=".sqldate($tmp1->format(FMT_DATE_ISO)).
+					", rem_estado=".sqlstring(CERRADO).
+					", rem_nombre_conformidad=".sqlstring($_POST['responsable']).
+					" where rem_numero=".sqlint($_POST['nro_rem'])." and rem_tipo='".ORIGEN."'";
+				
+					$conn->execute($sql);
+	?>
+					<table align="center" width="30%" class="tablaconbordes">
+					<tr>
+					<td align="center" class="celdatexto">Fecha de cierre ingresada para remito: <?=$_POST['nro_rem'] ?></td>
+					</tr>
+					</table>
+	<?
+				}
+			}
+		}
+		else
+		{
+			?>
+			<table align="center" width="40%" class="tablaconbordes">
+			<tr>
+			<td align="center" class="textoerror">No se encontro el remito ingresado.</td>
+			</tr>
+			</table>
+			<?
+		}
+	
+	}
+	catch(exception $e)
+	{
+		?>
+		<table align="center" width="30%" class="tablaconbordes">
+		<tr>
+		<td align="center" class="textoerror">No se pudo realizar la operación.</td>
+		</tr>
+		</table>
+		<?
+	}
+	$conn->CompleteTrans();
+}
+}//Cierro if de seguridad
+?>

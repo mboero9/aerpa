@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="463"
+   name=""
+   committed-date="2006-02-02T14:54:37.270194Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/adodb/docs"
+   last-author="diegog"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="463"
+   name="docs-session.htm"
+   text-time="2006-05-08T14:22:55.640625Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="1fa7016db11e4a6ad9897b6a3a6ed40a"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.421875Z"/>
+<entry
+   committed-rev="463"
+   name="docs-oracle.htm"
+   text-time="2006-05-08T14:22:55.656250Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="fc246a6bc5420e52981a6cdbc62cecbe"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.437500Z"/>
+<entry
+   committed-rev="463"
+   name="readme.htm"
+   text-time="2006-05-08T14:22:55.671875Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="9a0e51379d70a597d2be5cf38ee0dbed"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.453125Z"/>
+<entry
+   committed-rev="463"
+   name="docs-adodb.htm"
+   text-time="2006-05-08T14:22:55.687500Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="ebc77448bcc9a2b95773dc74421671a7"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.562500Z"/>
+<entry
+   committed-rev="463"
+   name="tute.htm"
+   text-time="2006-05-08T14:22:55.687500Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="691e557cea6f1f8d7d07329459120954"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.578125Z"/>
+<entry
+   committed-rev="463"
+   name="docs-perf.htm"
+   text-time="2006-05-08T14:22:55.703125Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="4d38c99c449e15e7277e35e5cc2713c6"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.578125Z"/>
+<entry
+   committed-rev="463"
+   name="docs-datadict.htm"
+   text-time="2006-05-08T14:22:55.718750Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="13114087e7194b57d9d4c26ba7d55bb7"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.593750Z"/>
+<entry
+   committed-rev="463"
+   name="old-changelog.htm"
+   text-time="2006-05-08T14:22:55.734375Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="3158a33f9d5eda38a369b5749198dd02"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.609375Z"/>
+<entry
+   committed-rev="463"
+   name="tips_portable_sql.htm"
+   text-time="2006-05-08T14:22:55.750000Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="40273e36d6d0b2c5e09a55698cd45ef7"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.625000Z"/>
+</wc-entries>

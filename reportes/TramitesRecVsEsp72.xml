@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report Name="TramitesRecVsEsp" MarginTop="10" MarginBottom="10">
+	<ReportHeader Height="15">
+		<ReportLabel Text="Trámites Recibidos vs. Esperados" Align="RPT_ALIGN_CENTER"
+			X="0" Y="3" Width="190" Height="10"
+			FontSize="20" FontStyle="RPT_BOLDITALIC" />
+	</ReportHeader>
+
+	<PageHeader Height="16">
+		<ReportGraphic PSFunction="logocorreo"
+			X="0" Y="0" Width="40" Height="12" />
+		<ReportLabel Text="AAERPA" Align="RPT_ALIGN_CENTER"
+			X="0" Y="7" Width="190" Height="5"
+			FontSize="10" FontStyle="RPT_NORMAL" />
+		<ReportSysField Type="RPT_SYSDATE" FontSize="10"
+			FontStyle="RPT_NORMAL" Align="RPT_ALIGN_RIGHT"
+			Format="d/m/Y\ H:i"
+			X="140" Y="7" Width="50" Height="5" />
+		<ReportLine X="0" Y="13" Width="190" Height="0"
+			LineWidth=".05" />
+	</PageHeader>
+
+	<MainGroup>
+		<GroupHeader Height="25">
+			<ReportLabel Text="Registro Destino:"
+				X="0" Y="0" Width="30" Height="5"
+				FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportField FieldName="REG_COD_INT"
+				X="31" Y="0" Width="12" Height="5"
+				FontStyle="RPT_BOLD" FontSize="10" />
+			<ReportField FieldName="DES_DESTINO"
+				 X="45" Y="0" Width="150" Height="5"
+				 FontStyle="RPT_BOLD" FontSize="10" />
+
+			<ReportLabel Text="Fecha de Retiro desde:"
+				 X="0" Y="5" Width="40" Height="5"
+				 FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportLabel Text="FECDESDE"
+				 X="41" Y="5" Width="30" Height="5"
+				 FontStyle="RPT_BOLD" FontSize="10" />
+
+			<ReportLabel Text="Fecha de Retiro hasta:"
+				 X="0" Y="10" Width="40" Height="5"
+				 FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportLabel Text="FECHASTA"
+				 X="41" Y="10" Width="30" Height="5"
+				 FontStyle="RPT_BOLD" FontSize="10" />
+			<ReportLabel Text=""
+				 X="110" Y="10" Width="70" Height="5"
+				 FontStyle="RPT_BOLD" FontSize="10" />
+
+			<ReportLabel Text="Nro.de Trámite"
+				X="0" Y="21" Width="25" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="Nro.de Voucher"
+				X="28" Y="21" Width="25" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="Fecha de Retiro"
+				X="55" Y="21" Width="39" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="Fecha de Ent. o Dev."
+				X="80" Y="21" Width="39" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="Motivo"
+				X="130" Y="21" Width="39" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="Oficio"
+				X="160" Y="21" Width="39" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLabel Text="Días"
+				X="175" Y="21" Width="39" Height="4"
+				FontStyle="RPT_BOLD" FontSize="9" />
+			<ReportLine X="0" Y="25" Width="190" Height="0"
+				LineWidth=".2" />
+		</GroupHeader>
+
+		<GroupFooter Height="6">
+			<ReportLine X="0" Y="0" Width="190" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="Total de Trámites:"
+				 X="0" Y="1" Width="35" Height="5"
+				 FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportCalcField X="36" Y="1" Width="10" Height="5"
+				 FontStyle="RPT_BOLD" FontSize="9"
+				 FieldName="TRA_DOMINIO" Operation="RPT_COUNT"
+				 Format="%d" />
+			<ReportLine X="0" Y="6" Width="190" Height="0"
+				LineWidth=".2" />
+		</GroupFooter>		
+	
+	
+	
+	</MainGroup>
+
+	<Detail Height="4">
+		<ReportField FieldName="TRA_DOMINIO"
+			X="0" Y="0" Width="25" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="TRA_NRO_VOUCHER"
+			X="28" Y="0" Width="25" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="TRA_FECHA_RETIRO"
+			X="55" Y="0" Width="39" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="TRA_FECHA_ENTREGA"
+			X="88" Y="0" Width="39" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="MOT_DESCRIP"
+			X="112" Y="0" Width="55" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="IMPRESO"
+			X="165" Y="0" Width="39" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+		<ReportField FieldName="dif_dias"
+			X="180" Y="0" Width="39" Height="4"
+			FontStyle="RPT_NORMAL" FontSize="9" />
+
+	</Detail>
+
+	<PageFooter Height="10">
+		<ReportLine X="0" Y="6" Width="190" Height="0"
+			LineWidth=".05" />
+		<ReportSysField Type="RPT_SYSPAGENO" FontSize="8"
+			FontStyle="RPT_ITALIC" Align="RPT_ALIGN_CENTER"
+			Format="Página %d"
+			X="0" Y="7" Width="190" Height="3" />
+	</PageFooter>
+
+	<ReportFooter Height="0" />
+</Report>

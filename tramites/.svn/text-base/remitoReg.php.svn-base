@@ -1,0 +1,266 @@
+<?php
+require_once("../includes/lib.php");
+
+if (check_auth($usrid, $perid) && check_permission($permiso)) {
+// permiso ok
+	// validacion AJAX - back end
+	if (isset($_GET["ajax"])) {
+		try {
+			$tmp = new Date($_GET["carga_desde"]);
+			$desde = $tmp->format(FMT_DATE_ISO);
+			$tmp = new Date($_GET["carga_hasta"] . " 23:59:59");
+			$hasta = $tmp->format(FMT_DATE_ISO);
+			$sql = "Select TRA_DOMINIO
+				From TRAMITE
+				Where REG_CODIGO_DES In (
+					Select REG_CODIGO From REG_AUTOM
+					Where RGI_CODIGO = " . sqlstring($_GET["rgi_id"]) . ")
+				And TRA_FECHA_CARGA >= " . sqldate($desde) . "
+				And TRA_FECHA_CARGA <= " . sqldate($hasta) . "
+				Order by 1";
+			$rs = $conn->Execute($sql);
+			$out = "tramites";
+			if ($rs->EOF) {
+				$out .= "\n";
+			} else {
+				while ($a = $rs->FetchRow()) {
+					$out .= "\n" . implode("|", $a);
+				} // end fetch
+			} // end if eof
+			header("content-type: text/plain; charset=iso-8859-1");
+			echo($out);
+			return;
+		} catch (exception $e) {
+			dbhandleerror();
+		}
+	} // end if AJAX
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<?php require_once("../includes/inc_header.php"); ?>
+<!-- funcion parseDate -->
+<script type="text/javascript" language="JavaScript" src="../includes/fecha.js"></script>
+
+<!-- calendario desplegable -->
+<style type="text/css">@import url(../calendar/calendar-win2k-1.css);</style>
+<script type="text/javascript" src="../calendar/calendar.js"></script>
+<script type="text/javascript" src="../calendar/lang/calendar-es.js"></script>
+<script type="text/javascript" src="../calendar/calendar-setup.js"></script>
+
+<script type="text/javascript">
+<?php require_once("../includes/ajaxobjt.js"); ?>
+
+var updating = false;
+
+// Callback para el GET
+// validacion AJAX - front end
+function getHttp() {
+	if (http.readyState == 4) {
+		// obtener respuesta como texto
+		r = new String(http.responseText);
+		if (r.indexOf("invalid") == -1) {
+			i = r.indexOf("\n");
+			entidad = r.substr(0,i);
+			if (i < r.length) {
+				r = r.substr(i+1);
+			} else {
+				r = "";
+			}
+			document.frm.tram_lista.value = r;
+		}
+		document.getElementById("loading").style.display = "none";
+		updating = false;
+	}
+} // end getHttp
+
+function limpiar() {
+	document.frm.desde.value =
+		document.frm.hasta.value = "";
+	document.frm.region.selectedIndex = 0;
+	markDirty();
+} // end limpiar
+
+function getTramites() {
+	if (validar()) {
+		// Busqueda AJAX de los tramites
+		document.frm.tram_lista.value = "";
+		updating = true;
+		document.getElementById("loading").style.display = "";
+		http.open("GET", "?ajax&rgi_id=" + escape(document.frm.region.value) +
+			"&carga_desde=" + escape(document.frm.desde.value) +
+			"&carga_hasta=" + escape(document.frm.hasta.value), false);
+		http.send(null);
+		getHttp();
+
+		if (document.frm.tram_lista.value == "") {
+			document.getElementById("tramites").tBodies[0].innerHTML = "";
+			alert("El remito no incluye ningún trámite");
+			return false;
+		} else {
+			s = "";
+			fondo = 1;
+			regs = document.frm.tram_lista.value.split("\n");
+			for (i = 0; i < regs.length; i++) {
+				s += "<tr class=fondotabla" + fondo + "><td class=celdatexto>" + regs[i] +
+					"</td></tr>\n";
+				fondo = (fondo == 1 ? 2 : 1);
+			} // end for
+			document.getElementById("tramites").tBodies[0].innerHTML = s;
+			return true;
+		} // end if
+	} else {
+		return false;
+	} // end if validar
+} // end getTramites
+
+function validar() {
+	var s = "";
+
+	buf = new String(document.frm.desde.value);
+	dt1 = checkDate(buf);
+	if (!dt1) {
+		s += "- La fecha desde es inválida\n";
+	} // end valid fecha desde
+
+	buf = new String(document.frm.hasta.value);
+	dt2 = checkDate(buf);
+	if (!dt2) {
+		s += "- La fecha hasta es inválida\n";
+	} // end valid fecha hasta
+
+	buf = new String(document.frm.region.value);
+	if (buf.length == 0) {
+		s += "- Debe seleccionar la región\n";
+	} // end valid registro
+
+	if (s == "") {
+<?php
+$dt = dbdate();
+$y = idate("Y", $dt);
+$m = idate("m", $dt);
+$d = idate("d", $dt);
+
+$antiguedad_remito = getParametro(PAR_REMITO_ANTIGUEDAD);
+$periodo_remito = getParametro(PAR_REMITO_PERIODO);
+?>
+		dtHoy = new Array(<?php echo($y); ?>, <?php echo($m); ?>, <?php echo($d); ?>);
+		s += (compareDate(dt1, dt2) == 1 ?
+			"- La fecha desde es posterior a la fecha hasta\n" : "");
+		s += (compareDate(dt1, dtHoy) == 1 ?
+			"- La fecha desde no puede ser posterior a la fecha actual\n" : "");
+		s += (compareDate(dt2, dtHoy) == 1 ?
+			"- La fecha hasta no puede ser posterior a la fecha actual\n" : "");
+		s += (diffDateDay(dt1, dtHoy) > <?php echo($antiguedad_remito); ?> ?
+			"- La fecha desde puede ser no más de <?php echo($antiguedad_remito); ?> días previa a la actual\n" : "");
+		s += (diffDateDay(dt1, dt2) > <?php echo($periodo_remito); ?> ?
+			"- No puede haber más de <?php echo($periodo_remito); ?> días entre las fechas desde y hasta\n" : "");
+	} // end if
+
+	// Si datos ok, agregar fila
+	if (s != "") {
+		alert("Se han encontrado errores:\n" + s);
+		return false;
+	} else {
+		document.frm.ok.value = "1";
+		return true;
+	} // end if errores
+} // end validar
+
+function checkSubmit() {
+	// evitar nuevo submit si haciendo submit
+	if (document.frm.enviar.disabled) {
+		return false;
+	} // end if !reentry
+
+	if ((document.frm.ok.value == "1") && (document.frm.tram_lista.value != "")) {
+		return true;
+	} else {
+		if (getTramites()) {
+			document.frm.region_desc.value =
+				document.frm.region.options[document.frm.region.selectedIndex].text;
+			return true;
+		} else {
+			document.frm.enviar.disabled = false;
+			return false;
+		}
+	}
+} // end if checkSubmit
+
+function markDirty() {
+	document.frm.ok.value = 0;
+	document.frm.tram_lista.value = "";
+	document.getElementById("tramites").tBodies[0].innerHTML = "";
+} // end markDirty
+
+</script>
+</head>
+
+<body>
+<?php require_once('../includes/inc_topleft.php'); ?>
+
+<p class=titulo1>Remito por regi&oacute;n</p>
+
+<form action="remitoReg-do.php" method=post name=frm onsubmit="return checkSubmit();">
+<input type=hidden name=accion value="<?php echo($accion); ?>">
+<input type=hidden name=ok value="0">
+
+<p align=center>
+<table class=tablanormal>
+
+<tr><td class=celdatexto>Cargados desde</td>
+	<td class=celdatexto><input type=text name=desde id=desde size=8 maxlength=10
+			onBlur="parseDate(frm.desde,'<?php echo(FMT_DATE_CAL); ?>',true);"
+			onchange="markDirty();">
+		<img src="../imagenes/calendario.png" id="seldesde"
+			title="Calendario" style="cursor:pointer;"></td></tr>
+
+<tr><td class=celdatexto>Cargados hasta</td>
+	<td class=celdatexto><input type=text name=hasta id=hasta size=8 maxlength=10
+			onBlur="parseDate(frm.hasta,'<?php echo(FMT_DATE_CAL); ?>',true);"
+			onchange="markDirty(this);">
+		<img src="../imagenes/calendario.png" id="selhasta"
+			title="Calendario" style="cursor:pointer;"></td></tr>
+
+<tr><td class=celdatexto>Regi&oacute;n</td>
+	<td class=celdatexto><select name=region <?php echo($dis); ?>>
+		<option value="">Seleccione una opci&oacute;n</option>
+<?php fill_combo("Select RGI_CODIGO,RGI_DESCRIP From REGION
+	Where RGI_FECHA_BAJA Is Null Order by RGI_DESCRIP", null); ?>
+		</select>
+		<input type="hidden" name="region_desc"></td></tr>
+
+<tr><td colspan=2 class=celdatexto align=center>
+		<input type=button class=botonout value="Deshacer" onclick="limpiar();">
+		<input type=button class=botonout value="Buscar tr&aacute;mites" onclick="getTramites();">
+		<input type=submit name=enviar class=botonout value="Imprimir">
+		<input type=button class=botonout value="Volver" onclick="window.location = '../home/';">
+		<img src="../imagenes/loading.gif" id=loading style="display: none;">
+	</td></tr>
+
+<tr><td class=celdatexto>Remitos a incluir</td>
+	<td><input type=hidden name=tram_lista>
+		<table id="tramites">
+		<thead>
+			<tr><th class=celdatitulo>Dominio</th></tr>
+		</thead>
+		<tbody>
+		</tbody></table></td></tr>
+
+</table>
+</p>
+</form>
+<?php require_once("../includes/inc_bottom.php"); ?>
+<script type="text/javascript">
+	Calendar.setup( { inputField: "desde", ifFormat: "<?php echo(FMT_DATE_CAL); ?>", button: "seldesde" } );
+	Calendar.setup( { inputField: "hasta", ifFormat: "<?php echo(FMT_DATE_CAL); ?>", button: "selhasta" } );
+</script>
+
+</body>
+
+</html>
+<?php
+} // fin autorizacion
+?>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="589"
+   name=""
+   committed-date="2006-03-15T15:04:30.717105Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/css"
+   last-author="diegop"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="589"
+   name="aerpa01.css"
+   text-time="2006-05-08T14:22:52.671875Z"
+   committed-date="2006-03-15T15:04:30.717105Z"
+   checksum="7571c8755da7ad5d73f66a41ee5d1880"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:52.640625Z"/>
+</wc-entries>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="481"
+   name=""
+   committed-date="2006-02-06T22:21:56.401069Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/phpprintipp"
+   last-author="diegog"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   name="HTTP"
+   kind="dir"/>
+<entry
+   name="SASL"
+   kind="dir"/>
+<entry
+   name="testfiles"
+   kind="dir"/>
+<entry
+   committed-rev="481"
+   name="CupsPrintIPP.php"
+   text-time="2006-05-08T14:23:15.000000Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="8e7bb86bcf3f545d3d1a12820455f9eb"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:13.015625Z"/>
+<entry
+   committed-rev="481"
+   name="INSTALL"
+   text-time="2006-05-08T14:23:15.000000Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="8065987e3fcd4c1e52e1de779da8ca22"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:13.046875Z"/>
+<entry
+   committed-rev="481"
+   name="CHANGES"
+   text-time="2006-05-08T14:23:15.109375Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="dae816cf8a9327efece82cb55b57ab3b"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:13.062500Z"/>
+<entry
+   committed-rev="481"
+   name="COPYING"
+   text-time="2006-05-08T14:23:15.125000Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="fb504b67c50331fc78734fed90fb0e09"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:13.234375Z"/>
+<entry
+   name="documentation"
+   kind="dir"/>
+<entry
+   committed-rev="481"
+   name="TEST_PrintIPP.php"
+   text-time="2006-05-08T14:23:15.125000Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="2c47aca7f875c478cb4ff5d2c49c346a"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:14.281250Z"/>
+<entry
+   committed-rev="481"
+   name="http_class.php"
+   text-time="2006-05-08T14:23:15.140625Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="75bc80981dc88ae5398be6c238afc65e"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:14.296875Z"/>
+<entry
+   committed-rev="481"
+   name="PrintIPP.php"
+   text-time="2006-05-08T14:23:15.203125Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="3e110e3aa51732098da7b1f9d7f35119"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:14.375000Z"/>
+<entry
+   committed-rev="481"
+   name="ExtendedPrintIPP.php"
+   text-time="2006-05-08T14:23:15.593750Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="04b13904206353c1bf235d0a536a2ca7"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:14.421875Z"/>
+<entry
+   committed-rev="481"
+   name="README"
+   text-time="2006-05-08T14:23:15.609375Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="fee99b3733ada7f8133aa5d16d98b5bd"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:14.921875Z"/>
+</wc-entries>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="481"
+   name=""
+   committed-date="2006-02-06T22:21:56.401069Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/phpprintipp/HTTP"
+   last-author="diegog"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="481"
+   name="test_http_cookies.php"
+   text-time="2006-05-08T14:23:12.562500Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="21292cd376c9e3c39be2cf85220d9906"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:12.437500Z"/>
+<entry
+   committed-rev="481"
+   name="httpclient.gif"
+   text-time="2006-05-08T14:23:12.578125Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="4d15b593f3a8c1f305ea8a79bf423e57"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:12.437500Z"/>
+<entry
+   committed-rev="481"
+   name="test_http.php"
+   text-time="2006-05-08T14:23:12.593750Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="7cfc21e786cdbd41b3fd787ce59780c4"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:12.453125Z"/>
+<entry
+   committed-rev="481"
+   name="http.php"
+   text-time="2006-05-08T14:23:12.609375Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="86d38a4cbc21a03f5b246883e31d7108"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:12.468750Z"/>
+<entry
+   committed-rev="481"
+   name="test_http_soap.php"
+   text-time="2006-05-08T14:23:12.625000Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="9f8c4c8d00c4fc7710154449260a8899"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:12.484375Z"/>
+<entry
+   committed-rev="481"
+   name="test_http_post.php"
+   text-time="2006-05-08T14:23:12.625000Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="e8a68131ef3cb55560b346438dce1207"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:12.515625Z"/>
+<entry
+   committed-rev="481"
+   name="README"
+   text-time="2006-05-08T14:23:12.640625Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="ee368402efe24ac11277f9c72f8f584b"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:12.531250Z"/>
+<entry
+   committed-rev="481"
+   name="test_http_image_request.php"
+   text-time="2006-05-08T14:23:12.656250Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="c994bcac55aa96b178b3f316a50fe4f0"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:12.546875Z"/>
+</wc-entries>

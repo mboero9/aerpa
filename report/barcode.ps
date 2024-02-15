@@ -1,0 +1,289 @@
+%!PS-Adobe-2.0
+%%Creator: Aerpa
+%%DocumentPaperSizes: a4
+%%EndComments
+%%EndProlog
+
+% --BEGIN TEMPLATE--
+
+% --BEGIN ENCODER code39--
+/code39 {
+
+    0 begin                 % Confine variables to local scope
+
+    /options exch def       % We are given an option string
+    /useropts options def
+    /barcode exch def       % We are given a barcode string
+
+    /includecheck false def  % Enable/disable checkdigit
+    /includetext false def
+    /includecheckintext false def
+    /textfont /Courier def
+    /textsize 10 def
+    /textpos -7 def
+    /height 1 def
+    
+    % Parse the input options
+    options {
+        token false eq {exit} if dup length string cvs (=) search
+        true eq {cvlit exch pop exch def} {cvlit true def} ifelse
+    } loop
+    
+    /textfont textfont cvlit def
+    /textsize textsize cvr def
+    /textpos textpos cvr def
+    /height height cvr def
+    
+    % Create an array containing the character mappings
+    /encs
+    [ (1113313111) (3113111131) (1133111131) (3133111111) (1113311131)
+      (3113311111) (1133311111) (1113113131) (3113113111) (1133113111)
+      (3111131131) (1131131131) (3131131111) (1111331131) (3111331111)
+      (1131331111) (1111133131) (3111133111) (1131133111) (1111333111)
+      (3111111331) (1131111331) (3131111311) (1111311331) (3111311311)
+      (1131311311) (1111113331) (3111113311) (1131113311) (1111313311)
+      (3311111131) (1331111131) (3331111111) (1311311131) (3311311111)
+      (1331311111) (1311113131) (3311113111) (1331113111) (1313131111)
+      (1313111311) (1311131311) (1113131311) (1311313111)
+    ] def
+
+    % Create a string of the available characters
+    /barchars (0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%*) def
+
+    /barlen barcode length def  % Length of the code
+
+    includecheck {
+        /sbs barlen 10 mul 30 add string def
+        /txt barlen 3 add array def
+    } {
+        /sbs barlen 10 mul 20 add string def
+        /txt barlen 2 add array def
+    } ifelse
+
+    /checksum 0 def
+
+    % Put the start character
+    sbs 0 encs 43 get putinterval
+    txt 0 [() 0 textpos textfont textsize] put
+
+    0 1 barlen 1 sub {
+        /i exch def
+        % Lookup the encoding for the each barcode character
+        barcode i 1 getinterval barchars exch search
+        pop                                  % Discard true leaving pre
+        length /indx exch def                % indx is the length of pre
+        pop pop                              % Discard seek and post
+        /enc encs indx get def               % Get the indxth encoding
+        sbs i 10 mul 10 add enc putinterval  % Put encoded digit into sbs
+        txt i 1 add [barcode i 1 getinterval i 1 add 16 mul textpos textfont textsize] put
+        /checksum checksum indx add def
+    } for
+
+    % Put the checksum and end characters
+    includecheck {
+        /checksum checksum 43 mod def
+        sbs barlen 10 mul 10 add encs checksum get putinterval
+        includecheckintext {
+            txt barlen 1 add [barchars checksum 1 getinterval barlen 1 add 16 mul textpos textfont textsize] put
+        } {
+            txt barlen 1 add [() barlen 1 add 16 mul textpos textfont textsize] put
+        } ifelse
+        sbs barlen 10 mul 20 add encs 43 get putinterval
+        txt barlen 2 add [(*) barlen 2 add 16 mul textpos textfont textsize] put
+    } {
+        sbs barlen 10 mul 10 add encs 43 get putinterval
+        txt barlen 1 add [() barlen 1 add 16 mul textpos textfont textsize] put
+    } ifelse
+    
+    % Return the arguments
+    /retval 2 dict def
+    retval (sbs) [sbs {48 sub} forall] put
+    retval (bhs) [sbs length 1 add 2 idiv {height} repeat] put
+    retval (bbs) [sbs length 1 add 2 idiv {0} repeat] put
+    includetext {
+          retval (txt) txt put
+    } if
+    retval (opt) useropts put
+    retval
+
+    end
+
+} bind def
+/code39 load 0 1 dict put
+% --END ENCODER code39--
+
+% --BEGIN RENDERER--
+/barcode {
+
+    0 begin          % Confine variables to local scope
+
+    /args exch def   % We are given some arguments
+
+    % Default options
+    /sbs [] def
+    /bhs [] def
+    /bbs [] def
+    /txt [] def
+    /barcolor (unset) def
+    /textcolor (unset) def
+    /bordercolor (unset) def
+    /backgroundcolor (unset) def
+    /inkspread 0.15 def
+    /width 0 def
+    /barratio 1 def
+    /spaceratio 1 def
+    /showborder false def
+    /borderleft 10 def
+    /borderright 10 def
+    /bordertop 1 def
+    /borderbottom 1 def
+    /borderwidth 0.5 def
+    /guardwhitespace false def
+    /guardleftpos 0 def
+    /guardleftypos 0 def
+    /guardrightpos 0 def
+    /guardrightypos 0 def
+    /guardwidth 6 def
+    /guardheight 7 def
+    
+    % Apply the renderer options
+    args {exch cvlit exch def} forall
+       
+    % Parse the user options   
+    opt {
+        token false eq {exit} if dup length string cvs (=) search
+        true eq {cvlit exch pop exch def} {cvlit true def} ifelse
+    } loop
+
+    /barcolor barcolor cvlit def
+    /textcolor textcolor cvlit def
+    /bordercolor bordercolor cvlit def
+    /backgroundcolor backgroundcolor cvlit def
+    /inkspread inkspread cvr def
+    /width width cvr def
+    /barratio barratio cvr def
+    /spaceratio spaceratio cvr def
+    /borderleft borderleft cvr def
+    /borderright borderright cvr def
+    /bordertop bordertop cvr def
+    /borderbottom borderbottom cvr def
+    /borderwidth borderwidth cvr def
+    /guardleftpos guardleftpos cvr def
+    /guardleftypos guardleftypos cvr def
+    /guardrightpos guardrightpos cvr def
+    /guardrightypos guardrightypos cvr def
+    /guardwidth guardwidth cvr def
+    /guardheight guardheight cvr def
+    
+    % Create bar elements and put them into the bars array
+    /bars sbs length 1 add 2 idiv array def
+    /x 0.00 def /maxh 0 def
+    0 1 sbs length 1 add 2 idiv 2 mul 2 sub {
+        /i exch def
+        i 2 mod 0 eq {           % i is even
+            /d sbs i get barratio mul barratio sub 1 add def  % d=digit*r-r+1 
+            /h bhs i 2 idiv get 32 mul def  % Height from bhs
+            /c d 2 div x add def            % Centre of the bar = x + d/2
+            /y bbs i 2 idiv get 32 mul def  % Baseline from bbs
+            /w d inkspread sub def          % bar width = digit - inkspread
+            bars i 2 idiv [h c y w] put     % Add the bar entry
+            h maxh gt {/maxh h def} if
+        } {
+            /d sbs i get spaceratio mul spaceratio sub 1 add def  % d=digit*r-r+1 
+        } ifelse
+        /x x d add def  % x+=d
+    } for
+
+    gsave
+
+    currentpoint translate
+
+    % Force symbol to given width
+    width 0 ne {
+        width 72 mul x div 1 scale
+    } if
+
+    % Display the border and background
+    newpath
+    borderleft neg borderbottom neg moveto
+    x borderleft add borderright add 0 rlineto
+    0 maxh borderbottom add bordertop add rlineto
+    x borderleft add borderright add neg 0 rlineto
+    0 maxh borderbottom add bordertop add neg rlineto    
+    closepath
+    backgroundcolor (unset) ne {
+        gsave
+        (<      >) dup 1 backgroundcolor putinterval cvx exec {255 div} forall setrgbcolor
+        fill
+        grestore  
+    } if     
+    showborder {
+        gsave
+        bordercolor (unset) ne {
+            (<      >) dup 1 bordercolor putinterval cvx exec {255 div} forall setrgbcolor
+        } if
+        borderwidth setlinewidth stroke
+        grestore
+    } if    
+   
+    % Display the bars for elements in the bars array
+    gsave
+    barcolor (unset) ne {
+        (<      >) dup 1 barcolor putinterval cvx exec {255 div} forall setrgbcolor
+    } if
+    bars {
+        {} forall
+        newpath setlinewidth moveto 0 exch rlineto stroke
+    } forall
+    grestore
+    
+    % Display the text for elements in the text array
+    textcolor (unset) ne {
+        (<      >) dup 1 textcolor putinterval cvx exec {255 div} forall setrgbcolor
+    } if
+    /s 0 def /f () def
+    txt {
+        {} forall
+        2 copy s ne exch f ne or {
+            2 copy /s exch def /f exch def            
+            exch findfont exch scalefont setfont          
+        } {
+            pop pop
+        } ifelse
+        moveto show
+    } forall
+
+    % Display the guard elements
+    guardwhitespace {
+        0.75 setlinewidth
+        guardleftpos 0 ne {
+            newpath
+            guardleftpos neg guardwidth add guardleftypos guardwidth 2 div add moveto
+            guardwidth neg guardheight -2 div rlineto
+            guardwidth guardheight -2 div rlineto
+            stroke            
+        } if
+        guardrightpos 0 ne {
+            newpath
+            guardrightpos x add guardwidth sub guardrightypos guardheight 2 div add moveto
+            guardwidth guardheight -2 div rlineto
+            guardwidth neg guardheight -2 div rlineto
+            stroke            
+        } if
+    } if
+    
+    grestore
+    
+    end
+
+} bind def
+/barcode load 0 1 dict put
+% --END RENDERER--
+
+% --END TEMPLATE--
+/Helvetica findfont 10 scalefont setfont
+380 610 moveto (###code###) (includetext) code39 barcode
+
+showpage
+
+% --END SAMPLE--

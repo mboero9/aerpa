@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="463"
+   name=""
+   committed-date="2006-02-02T14:54:37.270194Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/adodb/xsl"
+   last-author="diegog"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="463"
+   name="remove-0.2.xsl"
+   text-time="2006-05-08T14:23:01.781250Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="0b2b85762fe8c79ec259c25098840e4d"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:01.484375Z"/>
+<entry
+   committed-rev="463"
+   name="convert-0.1-0.2.xsl"
+   text-time="2006-05-08T14:23:01.781250Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="f2a0873c02003d110d43077c4ea908ca"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:01.578125Z"/>
+<entry
+   committed-rev="463"
+   name="convert-0.2-0.1.xsl"
+   text-time="2006-05-08T14:23:01.828125Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="5d2788a525f2591249dedab11fa603b4"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:01.687500Z"/>
+</wc-entries>

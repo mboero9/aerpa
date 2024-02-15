@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="463"
+   name=""
+   committed-date="2006-02-02T14:54:37.270194Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/adodb/pear"
+   last-author="diegog"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   name="Auth"
+   kind="dir"/>
+<entry
+   committed-rev="463"
+   name="readme.Auth.txt"
+   text-time="2006-05-08T14:22:55.359375Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="497018d573a00f8e9c6881907cac4a63"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.328125Z"/>
+</wc-entries>

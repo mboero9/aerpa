@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="673"
+   name=""
+   committed-date="2006-05-05T20:16:42.624609Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/administracion"
+   last-author="gustavom"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="586"
+   name="registros-import.php"
+   text-time="2006-05-08T14:22:50.875000Z"
+   committed-date="2006-03-09T20:07:58.254809Z"
+   checksum="40e236679d0da7a99eface82a98df6c6"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.546875Z"/>
+<entry
+   committed-rev="584"
+   name="registros-import-do.php"
+   text-time="2006-05-08T14:22:50.859375Z"
+   committed-date="2006-03-07T19:05:47.418219Z"
+   checksum="23b97c52713adff7e44e5c12e19ab171"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.515625Z"/>
+<entry
+   committed-rev="593"
+   name="abmParametros.php"
+   text-time="2006-05-08T14:22:50.890625Z"
+   committed-date="2006-03-31T19:11:49.640698Z"
+   checksum="aed0bf32c3d458b3deb24e1af2e10175"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.578125Z"/>
+<entry
+   committed-rev="593"
+   name="tramites-import.php"
+   text-time="2006-05-08T14:22:50.921875Z"
+   committed-date="2006-03-31T19:11:49.640698Z"
+   checksum="eba66891da7f9a72420eae2e2b4eb56b"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.640625Z"/>
+<entry
+   committed-rev="673"
+   name="tramites-import-do.php"
+   text-time="2006-05-08T14:22:50.906250Z"
+   committed-date="2006-05-05T20:16:42.624609Z"
+   checksum="0ee4e2e749d7b7feb690aff314b0d6dd"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.625000Z"/>
+<entry
+   committed-rev="480"
+   name="abmParametros_ajax.php"
+   text-time="2006-05-08T14:22:50.890625Z"
+   committed-date="2006-02-06T20:14:44.585539Z"
+   checksum="9e2e29adb5a645081b8eed9b585cb967"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.593750Z"/>
+<entry
+   committed-rev="589"
+   name="calendario.php"
+   text-time="2006-05-08T14:22:50.921875Z"
+   committed-date="2006-03-15T15:04:30.717105Z"
+   checksum="88c0d5e4dee6454f9511c248a2a67b9a"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.671875Z"/>
+<entry
+   committed-rev="580"
+   name="inc_registros.php"
+   text-time="2006-05-08T14:22:50.937500Z"
+   committed-date="2006-03-06T20:52:50.838031Z"
+   checksum="8cc942af0138813550dbc16bcd0161fb"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.687500Z"/>
+<entry
+   committed-rev="589"
+   name="abcHabiles.php"
+   text-time="2006-05-08T14:22:50.968750Z"
+   committed-date="2006-03-15T15:04:30.717105Z"
+   checksum="023b0604c771cbff26a54e7d4c067b2c"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.718750Z"/>
+<entry
+   committed-rev="671"
+   name="abmprocesos.php"
+   text-time="2006-05-08T14:22:50.953125Z"
+   committed-date="2006-05-05T17:46:34.370365Z"
+   checksum="f196192fe964095992b6fd82b68a35f8"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.703125Z"/>
+<entry
+   committed-rev="651"
+   name="back_procesos.php"
+   text-time="2006-05-08T14:22:50.953125Z"
+   committed-date="2006-04-27T19:47:00.078996Z"
+   checksum="feed9c8675a2998eb77bb6e0c1f3d9c4"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.687500Z"/>
+<entry
+   committed-rev="589"
+   name="abcHabiles_ajax.php"
+   text-time="2006-05-08T14:22:50.984375Z"
+   committed-date="2006-03-15T15:04:30.717105Z"
+   checksum="d8bb6b1a124d1173a001dc5d61acf7b1"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.734375Z"/>
+<entry
+   committed-rev="634"
+   name="abmMotivos.php"
+   text-time="2006-05-08T14:22:50.984375Z"
+   committed-date="2006-04-21T18:10:16.309766Z"
+   checksum="c47d9bd0d2346a41b0038097e20d35f1"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.718750Z"/>
+<entry
+   committed-rev="637"
+   name="inc_tramites.php"
+   text-time="2006-05-08T14:22:51.015625Z"
+   committed-date="2006-04-24T19:52:40.543080Z"
+   checksum="cd0a6618adf3928931059e2921991e19"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.750000Z"/>
+<entry
+   committed-rev="567"
+   name="registro-edit-do.php"
+   text-time="2006-05-08T14:22:51.000000Z"
+   committed-date="2006-02-24T17:41:12.145835Z"
+   checksum="ea9f11a8bd64cdaf42a755e9a0967a77"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.750000Z"/>
+<entry
+   committed-rev="567"
+   name="registro-edit.php"
+   text-time="2006-05-08T14:22:51.015625Z"
+   committed-date="2006-02-24T17:41:12.145835Z"
+   checksum="68f54b2ad549681daa171c1bdd79b4a6"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.765625Z"/>
+<entry
+   committed-rev="558"
+   name="registros.php"
+   text-time="2006-05-08T14:22:51.031250Z"
+   committed-date="2006-02-21T18:44:37.298531Z"
+   checksum="976036d61b2991f02d9e9030f0d7ea9e"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.781250Z"/>
+<entry
+   committed-rev="534"
+   name="impresoras.php"
+   text-time="2006-05-08T14:22:51.046875Z"
+   committed-date="2006-02-15T20:55:39.357962Z"
+   checksum="2413369001e7fcdf99a9b79470f7070e"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.796875Z"/>
+<entry
+   committed-rev="534"
+   name="impresora-edit.php"
+   text-time="2006-05-08T14:22:51.062500Z"
+   committed-date="2006-02-15T20:55:39.357962Z"
+   checksum="c7e44cb29e2189c0c6dd9bad7057bb8f"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.812500Z"/>
+<entry
+   committed-rev="534"
+   name="impresora-edit-do.php"
+   text-time="2006-05-08T14:22:51.062500Z"
+   committed-date="2006-02-15T20:55:39.357962Z"
+   checksum="3b4f87a4982c997efe914fad98c20002"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.828125Z"/>
+<entry
+   committed-rev="520"
+   name="abmmenu.php"
+   text-time="2006-05-08T14:22:51.078125Z"
+   committed-date="2006-02-13T21:18:06.826363Z"
+   checksum="8ba1df08f0c3d39ca958771addad8f5d"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.828125Z"/>
+<entry
+   committed-rev="589"
+   name="abmmenu_ajax.php"
+   text-time="2006-05-08T14:22:51.093750Z"
+   committed-date="2006-03-15T15:04:30.717105Z"
+   checksum="cf8760fd768d3e156063513b84d4dd36"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.843750Z"/>
+</wc-entries>

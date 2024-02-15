@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="671"
+   name=""
+   committed-date="2006-05-05T17:46:34.370365Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/procesos"
+   last-author="gustavom"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="585"
+   name="sesiones_depurar.php"
+   text-time="2006-05-08T14:23:16.234375Z"
+   committed-date="2006-03-08T17:32:00.885691Z"
+   checksum="42e40d3a92cc1ac9124d08259a5f4dab"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:23:15.890625Z"/>
+<entry
+   committed-rev="575"
+   name="inc_controlproc.php"
+   text-time="2006-05-08T14:23:16.250000Z"
+   committed-date="2006-02-28T19:36:29.737498Z"
+   checksum="84276c146eb876fd3d6c0895bd03401d"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:15.937500Z"/>
+<entry
+   committed-rev="670"
+   name="logprocesos_depurar.php"
+   text-time="2006-05-08T14:23:16.281250Z"
+   committed-date="2006-05-05T14:29:58.250289Z"
+   checksum="88c475e32d48cf0c12408ec4955cdeda"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:23:15.953125Z"/>
+<entry
+   committed-rev="671"
+   name="proc_hist_dep.php"
+   text-time="2006-05-08T14:23:16.281250Z"
+   committed-date="2006-05-05T17:46:34.370365Z"
+   checksum="67af2b09fefaa504af7266febfae2309"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:23:16.093750Z"/>
+<entry
+   committed-rev="665"
+   name="depura_historico.php"
+   text-time="2006-05-08T14:23:16.296875Z"
+   committed-date="2006-05-04T17:51:28.040146Z"
+   checksum="b4176872258d0169da78815cd3e5202c"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:23:16.140625Z"/>
+<entry
+   committed-rev="575"
+   name="alarmasProc.php"
+   text-time="2006-05-08T14:23:16.312500Z"
+   committed-date="2006-02-28T19:36:29.737498Z"
+   checksum="ec5220ac1ebd1304b408adbe5ee90d7d"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:16.156250Z"/>
+<entry
+   committed-rev="651"
+   name="crontab.php"
+   text-time="2006-05-08T14:23:16.421875Z"
+   committed-date="2006-04-27T19:47:00.078996Z"
+   checksum="cd29b7668e14a7cc986ebaf119fbf52a"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:23:16.203125Z"/>
+</wc-entries>

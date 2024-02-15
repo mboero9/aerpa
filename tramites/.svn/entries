@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="663"
+   name=""
+   committed-date="2006-05-03T20:30:29.936933Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/tramites"
+   last-author="gustavom"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="639"
+   name="remitoGen.php"
+   text-time="2006-05-08T14:22:54.171875Z"
+   committed-date="2006-04-25T14:23:20.887974Z"
+   checksum="1b4ee0baf99f2b3cbdb37d832a73e1dc"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.640625Z"/>
+<entry
+   committed-rev="649"
+   name="amTramites_form.php"
+   text-time="2006-05-08T14:22:54.171875Z"
+   committed-date="2006-04-26T15:29:36.047817Z"
+   checksum="10eb258ba69082a0749c577beb39d12f"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.625000Z"/>
+<entry
+   committed-rev="612"
+   name="altaTramites.php"
+   text-time="2006-05-08T14:22:54.187500Z"
+   committed-date="2006-04-17T20:35:31.147403Z"
+   checksum="99e2c4b5b11180cb75b6635fd657eb04"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.656250Z"/>
+<entry
+   committed-rev="663"
+   name="amTramites.js"
+   text-time="2006-05-08T14:22:54.203125Z"
+   committed-date="2006-05-03T20:30:29.936933Z"
+   checksum="8091a2b0c0f72693d29d250bbe7bc0ed"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.671875Z"/>
+<entry
+   committed-rev="647"
+   name="remitoReg.php"
+   text-time="2006-05-08T14:22:54.218750Z"
+   committed-date="2006-04-26T13:20:53.369156Z"
+   checksum="c1e12b0662bdf999c8b541767b2ba842"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.718750Z"/>
+<entry
+   committed-rev="663"
+   name="altaTramites_ajax.php"
+   text-time="2006-05-08T14:22:54.218750Z"
+   committed-date="2006-05-03T20:30:29.936933Z"
+   checksum="403611fb2f3a1e433289099d817a657a"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.703125Z"/>
+<entry
+   committed-rev="654"
+   name="reimprimirRemito.php"
+   text-time="2006-05-08T14:22:54.234375Z"
+   committed-date="2006-04-27T20:33:18.317788Z"
+   checksum="4c6eb4d17800ad68bcd82f4668915703"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.734375Z"/>
+<entry
+   committed-rev="608"
+   name="conTramites.xml"
+   text-time="2006-05-08T14:22:54.250000Z"
+   committed-date="2006-04-12T19:51:53.763954Z"
+   checksum="849684efb1fd1b63db37859926c5ed49"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.734375Z"/>
+<entry
+   committed-rev="619"
+   name="reimprimirRemito_ajax.php"
+   text-time="2006-05-08T14:22:54.609375Z"
+   committed-date="2006-04-19T20:17:57.696168Z"
+   checksum="4e592636bfb2c1d0d2356c1336e9bf64"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.781250Z"/>
+<entry
+   committed-rev="656"
+   name="RendFinal.php"
+   text-time="2006-05-08T14:22:54.593750Z"
+   committed-date="2006-04-28T13:55:21.893687Z"
+   checksum="35325bd65f9229f36aeb15d816d2716c"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.765625Z"/>
+<entry
+   committed-rev="658"
+   name="AnuRemito.php"
+   text-time="2006-05-08T14:22:54.609375Z"
+   committed-date="2006-05-03T13:03:19.681505Z"
+   checksum="10227774558789da13ac301f30b5b228"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.812500Z"/>
+<entry
+   committed-rev="648"
+   name="remitoReg.xml"
+   text-time="2006-05-08T14:22:54.859375Z"
+   committed-date="2006-04-26T14:45:52.911981Z"
+   checksum="d27dcafde3be135b06afcafa02b41656"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.921875Z"/>
+<entry
+   committed-rev="577"
+   name="fecTramites.php"
+   text-time="2006-05-08T14:22:54.625000Z"
+   committed-date="2006-03-02T15:11:58.642014Z"
+   checksum="706c32e2a8c37fabfdaa9a5554fc0b5e"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.828125Z"/>
+<entry
+   committed-rev="648"
+   name="remito.xml"
+   text-time="2006-05-08T14:22:54.906250Z"
+   committed-date="2006-04-26T14:45:52.911981Z"
+   checksum="95ba9df2ae41f5f229dafc56bc629b70"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.937500Z"/>
+<entry
+   committed-rev="520"
+   name="conTramite_imp.php"
+   text-time="2006-05-08T14:22:54.906250Z"
+   committed-date="2006-02-13T21:18:06.826363Z"
+   checksum="4f82102e7b38ded4298cf2b92873defb"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:53.937500Z"/>
+<entry
+   committed-rev="663"
+   name="entdevTramite.php"
+   text-time="2006-05-08T14:22:54.921875Z"
+   committed-date="2006-05-03T20:30:29.936933Z"
+   checksum="8d9550d929ed04d3653e887edee90042"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:54.000000Z"/>
+<entry
+   committed-rev="663"
+   name="eleTramites.php"
+   text-time="2006-05-08T14:22:54.953125Z"
+   committed-date="2006-05-03T20:30:29.936933Z"
+   checksum="da05941deda511e2dd8d9a4884552d7c"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:54.031250Z"/>
+<entry
+   committed-rev="608"
+   name="conTramitesxReg.php"
+   text-time="2006-05-08T14:22:54.953125Z"
+   committed-date="2006-04-12T19:51:53.763954Z"
+   checksum="44ecd21086f18c4d1e8af5a2a80913bf"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:54.046875Z"/>
+<entry
+   committed-rev="635"
+   name="conTramites_hist.php"
+   text-time="2006-05-08T14:22:55.031250Z"
+   committed-date="2006-04-21T18:28:33.218134Z"
+   checksum="362232c38c8820cc91ae48bf955e6e32"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:54.093750Z"/>
+<entry
+   committed-rev="600"
+   name="devTramites.php"
+   text-time="2006-05-08T14:22:55.046875Z"
+   committed-date="2006-04-05T13:52:17.070481Z"
+   checksum="4cc6f51d5af7d942a814950a57378527"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:54.093750Z"/>
+<entry
+   committed-rev="608"
+   name="conTramitesxReg.xml"
+   text-time="2006-05-08T14:22:55.062500Z"
+   committed-date="2006-04-12T19:51:53.763954Z"
+   checksum="02fa11994de43801a5e47a33c15ecb9f"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:54.109375Z"/>
+<entry
+   committed-rev="596"
+   name="conTramites_hist.xml"
+   text-time="2006-05-08T14:22:55.078125Z"
+   committed-date="2006-04-04T15:15:07.338623Z"
+   checksum="836fe8dccfb547c8c2c008ef063451f0"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:54.125000Z"/>
+<entry
+   committed-rev="658"
+   name="conTramites.php"
+   text-time="2006-05-08T14:22:55.093750Z"
+   committed-date="2006-05-03T13:03:19.681505Z"
+   checksum="9c338df4b9dfbed8d04b2225b4fd9162"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:54.140625Z"/>
+<entry
+   committed-rev="649"
+   name="modTramites.php"
+   text-time="2006-05-08T14:22:55.093750Z"
+   committed-date="2006-04-26T15:29:36.047817Z"
+   checksum="4edfe2a24f0c78be7a98cdf4220789cc"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:54.140625Z"/>
+</wc-entries>

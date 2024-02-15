@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="463"
+   name=""
+   committed-date="2006-02-02T14:54:37.270194Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/adodb/datadict"
+   last-author="diegog"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="463"
+   name="datadict-firebird.inc.php"
+   text-time="2006-05-08T14:22:57.234375Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="77ebe2741a3eec5e44501e8da2985b45"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.093750Z"/>
+<entry
+   committed-rev="463"
+   name="datadict-postgres.inc.php"
+   text-time="2006-05-08T14:22:57.234375Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="300185f57b7a9cb399a24854ba20bd0a"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.109375Z"/>
+<entry
+   committed-rev="463"
+   name="datadict-sybase.inc.php"
+   text-time="2006-05-08T14:22:57.250000Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="aaa39f2916e871e5a6522ff16b9c37c9"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.109375Z"/>
+<entry
+   committed-rev="463"
+   name="datadict-db2.inc.php"
+   text-time="2006-05-08T14:22:57.265625Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="c3dd0ae21c490d4621dbf84c1fd975b7"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.125000Z"/>
+<entry
+   committed-rev="463"
+   name="datadict-sapdb.inc.php"
+   text-time="2006-05-08T14:22:57.265625Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="4ed3bf4a665214d573584c00d7075399"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.140625Z"/>
+<entry
+   committed-rev="463"
+   name="datadict-informix.inc.php"
+   text-time="2006-05-08T14:22:57.296875Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="3dbb65b36ab633f1307eca88a3af2447"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.140625Z"/>
+<entry
+   committed-rev="463"
+   name="datadict-generic.inc.php"
+   text-time="2006-05-08T14:22:57.312500Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="39aab5845ac06e76f8cab1df15319bf0"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.156250Z"/>
+<entry
+   committed-rev="463"
+   name="datadict-mssql.inc.php"
+   text-time="2006-05-08T14:22:57.328125Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="3ac8e1efd40fe1f0bb8d31532a3ba04f"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.171875Z"/>
+<entry
+   committed-rev="463"
+   name="datadict-access.inc.php"
+   text-time="2006-05-08T14:22:57.343750Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="fcc7de210cb597f5fb01c8e41483df2c"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.171875Z"/>
+<entry
+   committed-rev="463"
+   name="datadict-oci8.inc.php"
+   text-time="2006-05-08T14:22:57.343750Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="4e80508b1e7150dc8f42dea1f72a2bac"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.187500Z"/>
+<entry
+   committed-rev="463"
+   name="datadict-ibase.inc.php"
+   text-time="2006-05-08T14:22:57.359375Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="5cd0232d501c4e2f6dfa353d7f8bf0d4"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.203125Z"/>
+<entry
+   committed-rev="463"
+   name="datadict-mysql.inc.php"
+   text-time="2006-05-08T14:22:57.375000Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="ad57403ecf3191b944aa6bdf1847370f"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.218750Z"/>
+</wc-entries>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="481"
+   name=""
+   committed-date="2006-02-06T22:21:56.401069Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/phpprintipp/SASL"
+   last-author="diegog"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="481"
+   name="README"
+   text-time="2006-05-08T14:23:12.718750Z"
+   committed-date="2006-02-06T22:21:56.401069Z"
+   checksum="dea90bccd0e2265460055f073ce56eeb"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:12.703125Z"/>
+</wc-entries>

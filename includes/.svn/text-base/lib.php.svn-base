@@ -1,0 +1,9 @@
+<?php
+require_once("inc_constants.php");
+require_once("db.php");
+require_once("inc_functions.php");
+require_once("inc_sqlwrap.php");
+require_once("inc_checkauth.php");
+require_once("inc_date.php");
+require_once("inc_print.php");
+?>

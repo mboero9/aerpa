@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="672"
+   name=""
+   committed-date="2006-05-05T18:39:08.919156Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/reportes"
+   last-author="gustavom"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="660"
+   name="TramitesRecVsEspxReg.php"
+   text-time="2006-05-08T14:22:50.296875Z"
+   committed-date="2006-05-03T13:33:41.169431Z"
+   checksum="0ada53a0c215bad7c6d2d3d13eb66f75"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.015625Z"/>
+<entry
+   committed-rev="670"
+   name="Voucher.php"
+   text-time="2006-05-08T14:22:50.312500Z"
+   committed-date="2006-05-05T14:29:58.250289Z"
+   checksum="86e659263c6dde5514caa51ba98fc1e3"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.046875Z"/>
+<entry
+   committed-rev="672"
+   name="TramitesRecVsEsp.xml"
+   text-time="2006-05-08T14:22:50.328125Z"
+   committed-date="2006-05-05T18:39:08.919156Z"
+   checksum="b49a8926fd9217832db569bcd2b251bc"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.078125Z"/>
+<entry
+   committed-rev="659"
+   name="TramitesxFec.php"
+   text-time="2006-05-08T14:22:50.359375Z"
+   committed-date="2006-05-03T13:21:52.080837Z"
+   checksum="2d2a8989045cb9ab7d5c4c67b631d150"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.093750Z"/>
+<entry
+   committed-rev="661"
+   name="RemitosxFec.xml"
+   text-time="2006-05-08T14:22:50.375000Z"
+   committed-date="2006-05-03T15:05:30.364892Z"
+   checksum="9f35f7a50c19b1e027c52ff0abbe6ea5"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.109375Z"/>
+<entry
+   committed-rev="663"
+   name="TramitesRecVsEspxReg.xml"
+   text-time="2006-05-08T14:22:50.390625Z"
+   committed-date="2006-05-03T20:30:29.936933Z"
+   checksum="cc6520288a85ba3ac6a427707b62d27c"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.125000Z"/>
+<entry
+   committed-rev="664"
+   name="TramitesRecVsEsp.php"
+   text-time="2006-05-08T14:22:50.390625Z"
+   committed-date="2006-05-04T15:01:00.045281Z"
+   checksum="fd24e594bd19f6b4d2b8905adad5821d"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.156250Z"/>
+<entry
+   committed-rev="650"
+   name="TramitesRecVsEspHabil.php"
+   text-time="2006-05-08T14:22:50.406250Z"
+   committed-date="2006-04-27T19:41:49.337243Z"
+   checksum="4602ae8f070b4e22c23f3f78a699f11e"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.171875Z"/>
+<entry
+   committed-rev="603"
+   name="Voucher.xml"
+   text-time="2006-05-08T14:22:50.421875Z"
+   committed-date="2006-04-10T17:01:00.945839Z"
+   checksum="4c8b59b2e97a28d93465bd66ebfe48dd"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.203125Z"/>
+<entry
+   committed-rev="672"
+   name="TramitesRecVsEsp72.xml"
+   text-time="2006-05-08T14:22:50.421875Z"
+   committed-date="2006-05-05T18:39:08.919156Z"
+   checksum="ca27fee6b8ddb2c411ecf5aa922e9ffa"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.218750Z"/>
+<entry
+   committed-rev="608"
+   name="tramitesxFec.xml"
+   text-time="2006-05-08T14:22:50.437500Z"
+   committed-date="2006-04-12T19:51:53.763954Z"
+   checksum="2fafb75f55707f40e181e6dd9a151fe9"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.250000Z"/>
+<entry
+   committed-rev="661"
+   name="RemitosxFec.php"
+   text-time="2006-05-08T14:22:50.453125Z"
+   committed-date="2006-05-03T15:05:30.364892Z"
+   checksum="52934859d045061ea42c0c5f6dd539d7"
+   last-author="gustavom"
+   kind="file"
+   prop-time="2006-05-08T14:22:50.265625Z"/>
+</wc-entries>

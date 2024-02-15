@@ -1,0 +1,35 @@
+D/contrib////
+D/.svn////
+D/cute_icons_for_site////
+D/datadict////
+D/docs////
+D/drivers////
+D/lang////
+D/pear////
+D/perf////
+D/session////
+D/tests////
+D/xsl////
+/adodb-xmlschema.inc.php/1.7/Thu Jun  8 20:27:24 2006//
+/xmlschema.dtd/1.1/Thu Jun  8 20:22:27 2006//
+/tohtml.inc.php/1.1/Thu Jun  8 20:22:27 2006//
+/toexport.inc.php/1.1/Thu Jun  8 20:22:27 2006//
+/server.php/1.1/Thu Jun  8 20:22:27 2006//
+/rsfilter.inc.php/1.1/Thu Jun  8 20:22:27 2006//
+/readme.txt/1.1/Thu Jun  8 20:22:26 2006//
+/pivottable.inc.php/1.1/Thu Jun  8 20:22:26 2006//
+/license.txt/1.1/Thu Jun  8 20:22:26 2006//
+/adodb.inc.php/1.1/Thu Jun  8 20:22:23 2006//
+/adodb-csvlib.inc.php/1.1/Thu Jun  8 20:22:23 2006//
+/adodb-datadict.inc.php/1.1/Thu Jun  8 20:22:23 2006//
+/adodb-error.inc.php/1.1/Thu Jun  8 20:22:24 2006//
+/adodb-errorhandler.inc.php/1.1/Thu Jun  8 20:22:24 2006//
+/adodb-errorpear.inc.php/1.1/Thu Jun  8 20:22:24 2006//
+/adodb-exceptions.inc.php/1.1/Thu Jun  8 20:22:24 2006//
+/adodb-iterator.inc.php/1.1/Thu Jun  8 20:22:24 2006//
+/adodb-lib.inc.php/1.1/Thu Jun  8 20:22:25 2006//
+/adodb-pager.inc.php/1.1/Thu Jun  8 20:22:25 2006//
+/adodb-pear.inc.php/1.1/Thu Jun  8 20:22:25 2006//
+/adodb-perf.inc.php/1.1/Thu Jun  8 20:22:25 2006//
+/adodb-php4.inc.php/1.1/Thu Jun  8 20:22:25 2006//
+/adodb-time.inc.php/1.1/Thu Jun  8 20:22:26 2006//

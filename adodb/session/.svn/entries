@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="463"
+   name=""
+   committed-date="2006-02-02T14:54:37.270194Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/adodb/session"
+   last-author="diegog"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="463"
+   name="adodb-sessions.mysql.sql"
+   text-time="2006-05-08T14:22:59.062500Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="42fef0886af1f6da31a06de273876b71"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.468750Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-sessions.oracle.sql"
+   text-time="2006-05-08T14:22:59.046875Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="08d0fc1f5fbf8b79a4dca43cbd30e3a1"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.453125Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-session.php"
+   text-time="2006-05-08T14:22:59.078125Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="2e4ae343c24b428f185d62918cbda5cb"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.468750Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-encrypt-mcrypt.php"
+   text-time="2006-05-08T14:22:59.109375Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="ce8fee99986990db09cf7234129a3aeb"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.531250Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-session-clob.php"
+   text-time="2006-05-08T14:22:59.093750Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="e4f01a4d536cf8ef14c24e84ec732955"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.515625Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-sessions.oracle.clob.sql"
+   text-time="2006-05-08T14:22:59.078125Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="3c64f822ee1b493b319c6e8196cc06b8"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.500000Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-compress-gzip.php"
+   text-time="2006-05-08T14:22:59.156250Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="bab42ae2996b0b95c93a8bda57f36191"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.562500Z"/>
+<entry
+   committed-rev="463"
+   name="crypt.inc.php"
+   text-time="2006-05-08T14:22:59.140625Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="4dad264ca0f5f669be480305f6be8835"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.531250Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-cryptsession.php"
+   text-time="2006-05-08T14:22:59.187500Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="6829f4dfa1696c82c2d4f2e859edf52c"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.703125Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-sess.txt"
+   text-time="2006-05-08T14:22:59.171875Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="260bf23fe50279cf27842c0ac8b12ed4"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.656250Z"/>
+<entry
+   committed-rev="463"
+   name="session_schema.xml"
+   text-time="2006-05-08T14:22:59.171875Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="644334444418c6b39d20b6f22f3cf634"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.625000Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-encrypt-md5.php"
+   text-time="2006-05-08T14:22:59.203125Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="216a6ac6a132fe6ca7910df6163ed5c4"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.734375Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-encrypt-secret.php"
+   text-time="2006-05-08T14:22:59.203125Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="5309e06b4e39e0b6cbe20d3e2acfaa67"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.718750Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-encrypt-sha1.php"
+   text-time="2006-05-08T14:22:59.218750Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="5c928ad5f9385ce8ebf35c8c62fe729d"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.750000Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-compress-bzip2.php"
+   text-time="2006-05-08T14:22:59.234375Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="652ea296253b05750a62e77f813890ac"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.765625Z"/>
+<entry
+   name="old"
+   kind="dir"/>
+</wc-entries>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="575"
+   name=""
+   committed-date="2006-02-28T19:36:29.737498Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/adodb"
+   last-author="diegog"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="463"
+   name="adodb-php4.inc.php"
+   text-time="2006-05-08T14:23:04.750000Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="79e0fa1078884aadf127784ca544ba00"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.171875Z"/>
+<entry
+   committed-rev="463"
+   name="toexport.inc.php"
+   text-time="2006-05-08T14:23:04.843750Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="218f180fc4c8663ed435b38ab8e5701f"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.187500Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-xmlschema.inc.php"
+   text-time="2006-05-08T14:23:05.734375Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="babf99eb68b4ef27f162f4ccafb256de"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.203125Z"/>
+<entry
+   name="pear"
+   kind="dir"/>
+<entry
+   committed-rev="463"
+   name="adodb-csvlib.inc.php"
+   text-time="2006-05-08T14:23:06.406250Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="52905abccc728602a066404bf575e54e"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.375000Z"/>
+<entry
+   name="docs"
+   kind="dir"/>
+<entry
+   committed-rev="463"
+   name="xmlschema.dtd"
+   text-time="2006-05-08T14:23:06.531250Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="26f3f629d55257aafcf66840d7c66618"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.765625Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-pear.inc.php"
+   text-time="2006-05-08T14:23:06.796875Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="8b6a58a418d35f0439805c5d56d845ff"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.796875Z"/>
+<entry
+   committed-rev="463"
+   name="server.php"
+   text-time="2006-05-08T14:23:06.609375Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="6ce1d9484414ab83a62b07102d56b232"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.781250Z"/>
+<entry
+   committed-rev="463"
+   name="license.txt"
+   text-time="2006-05-08T14:23:07.000000Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="8bd77614212dddcfe8ef04c95fbd92e6"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:55.812500Z"/>
+<entry
+   name="tests"
+   kind="dir"/>
+<entry
+   committed-rev="463"
+   name="adodb-time.inc.php"
+   text-time="2006-05-08T14:23:07.203125Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="a7707b5455faf6d48a34a9842a5ee3a7"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.000000Z"/>
+<entry
+   committed-rev="463"
+   name="tohtml.inc.php"
+   text-time="2006-05-08T14:23:07.406250Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="c3c992f722306ef46d4e490149b21df3"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.000000Z"/>
+<entry
+   committed-rev="575"
+   name="adodb.inc.php"
+   text-time="2006-05-08T14:23:07.734375Z"
+   committed-date="2006-02-28T19:36:29.737498Z"
+   checksum="81d026686c2439c6197ac96252c3fb19"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:57.062500Z"/>
+<entry
+   name="datadict"
+   kind="dir"/>
+<entry
+   name="lang"
+   kind="dir"/>
+<entry
+   committed-rev="463"
+   name="adodb-datadict.inc.php"
+   text-time="2006-05-08T14:23:07.875000Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="e859cc0bc52c40abbab9133be0abf4e7"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.406250Z"/>
+<entry
+   name="session"
+   kind="dir"/>
+<entry
+   name="cute_icons_for_site"
+   kind="dir"/>
+<entry
+   committed-rev="463"
+   name="adodb-exceptions.inc.php"
+   text-time="2006-05-08T14:23:08.015625Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="cbb5cbec8627c28154c03e43928ec816"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:59.468750Z"/>
+<entry
+   committed-rev="463"
+   name="rsfilter.inc.php"
+   text-time="2006-05-08T14:23:08.125000Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="94ea90274efc0a862dd168ef002e636f"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:59.484375Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-errorhandler.inc.php"
+   text-time="2006-05-08T14:23:08.312500Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="3af6323699b6243cb9ad711f05a1e00d"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:00.203125Z"/>
+<entry
+   name="perf"
+   kind="dir"/>
+<entry
+   committed-rev="463"
+   name="adodb-iterator.inc.php"
+   text-time="2006-05-08T14:23:08.671875Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="2a7e55e380891b79eabd4d539f6db5d0"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:00.218750Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-error.inc.php"
+   text-time="2006-05-08T14:23:08.546875Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="d31960ef7ef7897ab61a768792150aef"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:00.218750Z"/>
+<entry
+   name="contrib"
+   kind="dir"/>
+<entry
+   committed-rev="463"
+   name="adodb-perf.inc.php"
+   text-time="2006-05-08T14:23:08.843750Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="9e7a66694e695b838a11b7de38389cfd"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:00.796875Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-pager.inc.php"
+   text-time="2006-05-08T14:23:09.000000Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="0e2b2e6c61361706df9cc7b0186518c3"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:00.953125Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-errorpear.inc.php"
+   text-time="2006-05-08T14:23:09.125000Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="b290e3d21744fe70779d6db4e86b0065"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:01.046875Z"/>
+<entry
+   name="xsl"
+   kind="dir"/>
+<entry
+   committed-rev="463"
+   name="pivottable.inc.php"
+   text-time="2006-05-08T14:23:09.281250Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="b193c2d058047b1e2ca51f0fa720c916"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:01.875000Z"/>
+<entry
+   committed-rev="463"
+   name="readme.txt"
+   text-time="2006-05-08T14:23:09.437500Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="856de932c83745af0a66cd21d6d1abbf"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:01.875000Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-lib.inc.php"
+   text-time="2006-05-08T14:23:09.656250Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="b8fc6d0abeaa20620a7e492a187c424d"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:01.921875Z"/>
+<entry
+   name="drivers"
+   kind="dir"/>
+</wc-entries>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report Name="Trámites por fecha" MarginTop="10" MarginBottom="10">
+	<PageHeader Height="35">
+			<ReportGraphic PSFunction="logocorreo"
+				X="0" Y="0" Width="40" Height="12" />
+			<ReportLabel Text="AAERPA" Align="RPT_ALIGN_CENTER"
+				X="0" Y="7" Width="190" Height="5"
+				FontSize="10" FontStyle="RPT_NORMAL" />
+			<ReportSysField Type="RPT_SYSDATE" FontSize="10"
+				FontStyle="RPT_NORMAL" Align="RPT_ALIGN_RIGHT"
+				Format="d/m/Y\ H:i"
+				X="140" Y="7" Width="50" Height="5" />
+			<ReportLine X="0" Y="13" Width="190" Height="0"
+				LineWidth=".05" />
+
+			<ReportLabel Text="Trámites por Fecha"
+				Align="RPT_ALIGN_CENTER"
+				X="0" Y="15" Width="190" Height="10"
+				FontSize="20" FontStyle="RPT_BOLDITALIC" />
+
+			<ReportLabel Text="Fecha de Retiro desde:"
+				 X="0" Y="25" Width="40" Height="5"
+				 FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportLabel Text="FECDESDE"
+				 X="41" Y="25" Width="18" Height="5"
+				 FontStyle="RPT_BOLD" FontSize="10" />
+			<ReportLabel Text="al"
+				 X="60" Y="25" Width="4" Height="5"
+				 FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportLabel Text="FECHASTA"
+				 X="65" Y="25" Width="30" Height="5"
+				 FontStyle="RPT_BOLD" FontSize="10" />
+			
+	</PageHeader>
+
+	<MainGroup Field="TRA_FECHA_RETIRO">
+		<GroupHeader Height="5">
+			<ReportLabel Text="Fecha de retiro:"
+				 X="0" Y="0" Width="30" Height="5"
+				 FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportField FieldName="TRA_FECHA_RETIRO"
+				 X="31" Y="0" Width="18" Height="5"
+				 FontStyle="RPT_BOLD" FontSize="10" />
+			<ReportLine X="0" Y="5" Width="190" Height="0"
+				LineWidth=".2" />
+		</GroupHeader>
+
+		<GroupFooter Height="7">
+			<ReportLine X="0" Y="0" Width="190" Height="0"
+				LineWidth=".2" />
+			<ReportLabel Text="Total fecha:"
+				X="0" Y="0" Width="30" Height="5"
+				FontStyle="RPT_NORMAL" FontSize="10" />
+			<ReportCalcField X="31" Y="0" Width="40" Height="5"
+				FontStyle="RPT_BOLD" FontSize="9"
+				FieldName="TRA_DOMINIO" Operation="RPT_COUNT"
+				Format="%d" />
+		</GroupFooter>
+
+		<SubGroup Field="REG_COD_INT">
+			<GroupHeader Height="5">
+				<ReportLabel Text="Código"
+					X="0" Y="0" Width="14" Height="4"
+					FontStyle="RPT_BOLD" FontSize="8" />
+				<ReportLabel Text="Registro automotor"
+					X="13" Y="0" Width="70" Height="4"
+					FontStyle="RPT_BOLD" FontSize="8" />
+				<ReportLabel Text="Trámite"
+					X="55" Y="0" Width="20" Height="4"
+					FontStyle="RPT_BOLD" FontSize="8" />
+				<ReportLabel Text="Voucher"
+					X="75" Y="0" Width="25" Height="4"
+					FontStyle="RPT_BOLD" FontSize="8" />
+				<ReportLabel Text="OF"
+				 X="90" Y="0" Width="25" Height="4"
+				 FontStyle="RPT_BOLD" FontSize="8" />
+	    		<ReportLabel Text="Rem.Ori"
+				 X="96" Y="0" Width="30" Height="4"
+				 FontStyle="RPT_BOLD" FontSize="8" />
+				 <ReportLabel Text="Rem.Des"
+				 X="111" Y="0" Width="30" Height="4"
+				 FontStyle="RPT_BOLD" FontSize="8" />
+ 				 <ReportLabel Text="O.Carga"
+				 X="124" Y="0" Width="25" Height="4"
+				 FontStyle="RPT_BOLD" FontSize="8" />
+ 				 <ReportLabel Text="F.Carga"
+				 X="145" Y="0" Width="17" Height="4"
+				 FontStyle="RPT_BOLD" FontSize="8" />
+				 <ReportLabel Text="Reg.Dest"
+				 X="162" Y="0" Width="14" Height="4"
+				 FontStyle="RPT_BOLD" FontSize="8" />
+				 <ReportLabel Text="Rem.Dev"
+				 X="176" Y="0" Width="14" Height="4"
+				 FontStyle="RPT_BOLD" FontSize="8" />
+				
+				<ReportLine X="0" Y="5" Width="190" Height="0"
+					LineWidth=".2" />
+			</GroupHeader>
+
+			<GroupFooter Height="5">
+				<ReportLine X="0" Y="0" Width="190" Height="0"
+					LineWidth=".2" />
+				<ReportLabel Text="Total registro:"
+					X="0" Y="0" Width="30" Height="5"
+					FontStyle="RPT_NORMAL" FontSize="10" />
+				<ReportCalcField X="31" Y="0" Width="40" Height="5"
+					FontStyle="RPT_BOLD" FontSize="9"
+					FieldName="TRA_DOMINIO" Operation="RPT_COUNT"
+					Format="%d" />
+			</GroupFooter>
+		</SubGroup>
+	</MainGroup>
+
+	<Detail Height="4">
+		<ReportField FieldName="REG_COD_INT"
+			 X="0" Y="0" Width="14" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="8" />
+		<ReportField FieldName="DES_ORIGEN"
+			 X="13" Y="0" Width="70" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="8" />
+		<ReportField FieldName="TRA_DOMINIO"
+			 X="55" Y="0" Width="20" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="8" />
+	  	<ReportField FieldName="TRA_NRO_VOUCHER"
+			 X="75" Y="0" Width="25" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="8" />
+		<ReportField FieldName="IMPRESO"
+			 X="90" Y="0" Width="10" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="8" />
+		<ReportField FieldName="ORI"
+			 X="96" Y="0" Width="25" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="8" />
+		<ReportField FieldName="DES"
+			 X="111" Y="0" Width="25" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="8" />
+		<ReportField FieldName="usr_username"
+			 X="124" Y="0" Width="25" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="8" />
+		<ReportField FieldName="tra_fecha_carga"
+			 X="145" Y="0" Width="17" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="8" />
+		<ReportField FieldName="reg_numero"
+			 X="162" Y="0" Width="14" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="8" />
+		<ReportField FieldName="REM_DEV_ORI"
+			 X="176" Y="0" Width="14" Height="4"
+			 FontStyle="RPT_NORMAL" FontSize="8" />		 
+	</Detail>
+
+	<PageFooter Height="10">
+		<ReportLine X="0" Y="6" Width="190" Height="0"
+			LineWidth=".05" />
+		<ReportSysField Type="RPT_SYSPAGENO" FontSize="8"
+			FontStyle="RPT_ITALIC" Align="RPT_ALIGN_CENTER"
+			Format="Página %d"
+			X="0" Y="7" Width="190" Height="3" />
+	</PageFooter>
+
+	<ReportHeader Height="0" />
+
+	<ReportFooter Height="0" />
+</Report>

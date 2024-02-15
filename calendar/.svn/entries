@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="504"
+   name=""
+   committed-date="2006-02-09T13:17:21.133483Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/calendar"
+   last-author="diegop"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="6"
+   name="img.gif"
+   text-time="2006-05-08T14:23:11.515625Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="c1e5255bd358fcd5a0779a0cc310a2fe"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:09.718750Z"/>
+<entry
+   name="lang"
+   kind="dir"/>
+<entry
+   committed-rev="6"
+   name="calendar-setup.js"
+   text-time="2006-05-08T14:23:11.531250Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="1b62074163be0986b863212f762ec745"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.312500Z"/>
+<entry
+   committed-rev="6"
+   name="calendar-system.css"
+   text-time="2006-05-08T14:23:11.515625Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="1317951e11c53906f398c5b386d353ac"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.296875Z"/>
+<entry
+   committed-rev="6"
+   name="menuarrow.gif"
+   text-time="2006-05-08T14:23:11.546875Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="b5a91d7a2755198b2eb729541ad3288c"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.312500Z"/>
+<entry
+   committed-rev="6"
+   name="calendar.js"
+   text-time="2006-05-08T14:23:11.562500Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="d64089b35a7ad42527df353a39c9dafd"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.328125Z"/>
+<entry
+   committed-rev="6"
+   name="calendar-blue.css"
+   text-time="2006-05-08T14:23:11.593750Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="99e9a0e8deaff1b849cdd9c3d03e4759"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.375000Z"/>
+<entry
+   committed-rev="6"
+   name="calendar-brown.css"
+   text-time="2006-05-08T14:23:11.578125Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="56a8c74274e9e1f3cb5188e8267f76f9"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.359375Z"/>
+<entry
+   committed-rev="6"
+   name="calendar-tas.css"
+   text-time="2006-05-08T14:23:11.562500Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="4d627bfcb7a0da04656689366ae40c8a"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.343750Z"/>
+<entry
+   committed-rev="6"
+   name="calendar-win2k-1.css"
+   text-time="2006-05-08T14:23:11.609375Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="5319cdf259284bae393a655dbfe66ee7"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.390625Z"/>
+<entry
+   committed-rev="6"
+   name="calendar-win2k-2.css"
+   text-time="2006-05-08T14:23:11.609375Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="df701c24955d8351a8101789d6902d44"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.406250Z"/>
+<entry
+   committed-rev="6"
+   name="calendar-setup_stripped.js"
+   text-time="2006-05-08T14:23:11.625000Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="9a986b3ba768db5f846c668e924a0467"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.421875Z"/>
+<entry
+   committed-rev="6"
+   name="calendar-green.css"
+   text-time="2006-05-08T14:23:11.640625Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="6cf6b8d188d5384da14fc8eaa94997a8"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.437500Z"/>
+<entry
+   committed-rev="6"
+   name="calendar_stripped.js"
+   text-time="2006-05-08T14:23:11.640625Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="bd39a52d818190bf8a0594147edd73d0"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.437500Z"/>
+<entry
+   committed-rev="6"
+   name="calendar.php"
+   text-time="2006-05-08T14:23:11.656250Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="cb902970e34e81acaaaa80b44d26ee2b"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.453125Z"/>
+<entry
+   committed-rev="6"
+   name="calendar-win2k-cold-1.css"
+   text-time="2006-05-08T14:23:11.671875Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="ee8991675cf45acb88437a59db0a86b2"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.468750Z"/>
+<entry
+   committed-rev="6"
+   name="menuarrow2.gif"
+   text-time="2006-05-08T14:23:11.687500Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="1f8c673c8f76832febaeeac88a5f4353"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.468750Z"/>
+<entry
+   committed-rev="6"
+   name="calendar-win2k-cold-2.css"
+   text-time="2006-05-08T14:23:11.703125Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="e3d900670c11f5688a6627e94063d2b4"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.484375Z"/>
+<entry
+   committed-rev="6"
+   name="calendar-blue2.css"
+   text-time="2006-05-08T14:23:11.703125Z"
+   committed-date="2005-08-02T13:32:19.062500Z"
+   checksum="5191d4bed4866d560f0a0986410fb997"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:23:11.500000Z"/>
+</wc-entries>

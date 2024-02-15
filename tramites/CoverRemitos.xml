@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report Name="Cover" MarginTop="10" MarginBottom="10">
+	<ReportHeader Height="80">
+		<ReportLabel Text="" Align="RPT_ALIGN_CENTER"
+			X="0" Y="10" Width="190" Height="10"
+			FontSize="20" FontStyle="RPT_BOLDITALIC" />
+		<ReportLabel Text=""
+			X="10" Y="40" Width="60" Height="10"
+			FontSize="20" FontStyle="RPT_BOLDITALIC" />
+		<ReportLabel Text=""
+			X="50" Y="40" Width="90" Height="10"
+			FontSize="20" FontStyle="RPT_BOLDITALIC" />			
+		<ReportLabel Text=""
+			X="10" Y="70" Width="80" Height="10"
+			FontSize="15" FontStyle="RPT_BOLDITALIC" />		
+		<ReportLabel Text=""
+			X="70" Y="70" Width="0" Height="0"
+			FontSize="15" FontStyle="RPT_BOLDITALIC" />					
+		<ReportLabel Text=""
+			X="110" Y="70" Width="0" Height="0"
+			FontSize="15" FontStyle="RPT_BOLDITALIC" />			
+		<ReportLabel Text=""
+			X="140" Y="70" Width="0" Height="0"
+			FontSize="15" FontStyle="RPT_BOLDITALIC" />  						
+		<!--<ReportLine X="0" Y="285" Width="190" Height="0"
+			LineWidth=".05" />--> 
+	</ReportHeader>
+	<PageHeader Height="33">
+		<ReportGraphic PSFunction=""
+			X="0" Y="0" Width="40" Height="12" />
+		<ReportLabel Text="" Align="RPT_ALIGN_CENTER"
+			X="0" Y="7" Width="190" Height="5"
+			FontSize="10" FontStyle="RPT_NORMAL" />
+		<ReportSysField Type="" FontSize="10"
+			FontStyle="RPT_NORMAL" Align="RPT_ALIGN_RIGHT"
+			Format=""
+			X="140" Y="7" Width="50" Height="5" />
+		<!--<ReportLine X="0" Y="13" Width="190" Height="0"
+			LineWidth=".05" />-->
+	</PageHeader>
+	<MainGroup>
+	<GroupPageFooter Height="15" abajo="1">
+												
+	</GroupPageFooter>
+	</MainGroup>
+	<PageFooter Height="0" />
+	<ReportFooter Height="0" />
+</Report>

@@ -1,0 +1,284 @@
+<?php
+require_once("../includes/lib.php");
+if (check_auth($usrid, $perid) && check_permission($permiso)) {
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<?php require_once("../includes/inc_header.php"); ?>
+<script type="text/javascript">
+<?php require_once("../includes/ajaxobjt.js"); ?>
+
+var updating = false;
+
+// Callback para el GET
+// validacion AJAX - front end
+function getHttp() {
+	if (http.readyState == 4) {
+		// obtener respuesta como texto
+		r = new String(http.responseText);
+//alert(r);		
+		if (r.indexOf("invalid") == -1) {
+			i = r.indexOf("\n");
+			entidad = r.substr(0,i);
+			if (i < r.length) {
+				r = r.substr(i+1);
+			} else {
+				r = "";
+			}
+			document.form1.tram_lista.value = r;
+		}
+		document.getElementById("loading").style.display = "none";
+		updating = false;
+	}
+} // end getHttp
+
+function ValidarRem() {
+	ok=true;
+    var tipo_err;
+	var desde=document.form1.desde.value;
+	var hasta=document.form1.hasta.value;
+	var tipo = (document.getElementById("tipo_remito1").checked ? 'origen' : 'destino');	
+	var anulados=0;
+	var cant_remitos=0;
+	
+	if(desde=="") {
+		alert("-- No ha ingresado el número de remito desde! --");
+		ok=false;
+		return ok;
+	}
+	if(hasta=="") {
+		
+		document.form1.hasta.value=document.form1.desde.value;
+		cant_remitos=1;
+	}
+	if(document.form1.desde.value==document.form1.hasta.value)
+	{
+		cant_remitos=1;
+	}
+	nro_valido = new RegExp("^[0-9]*$","i");
+	if(!nro_valido.test(desde)) {
+		alert("-- El Nro. de Remito desde contiene caracteres invalidos! -- ");
+		ok=false;
+		return ok;
+	}
+	if(!nro_valido.test(hasta)) {
+		alert("-- El Nro. de Remito hasta contiene caracteres invalidos! -- ");
+		ok=false;
+		return ok;
+	}		
+	
+	http.open("GET", "reimprimirRemito_ajax.php?ajax=remito&desde=" + document.form1.desde.value+"&hasta="+document.form1.hasta.value+
+					      "&par_registro="+tipo, false);
+	/*alert("reimprimirRemito_ajax.php?ajax=remito&desde=" + document.form1.desde.value+"&hasta="+document.form1.hasta.value+
+					      "&par_registro="+tipo);*/
+					
+	http.send(null);
+	if (http.readyState == 4) {	
+		r = new String(http.responseText);
+		
+		if (r.indexOf("invalid") == -1) {
+			i = r.indexOf("\n");
+			entidad = r.substr(0,i);
+			if (i < r.length) {
+				r = r.substr(i+1);
+			} else {
+				r = "";
+			}
+			regs = r.split("\n");					
+		}		
+		for (i = 0; i < regs.length; i++) {
+
+				reg = regs[i].split("|");
+				
+				if (reg[0]=='CERRADO') {
+					tipo_err='Hay remitos con fecha de cierre en el rango.';
+					ok=false;
+					break;
+					}
+				if (reg[0]=='ENTREGADO') {
+					tipo_err='Hay remitos con fecha de entrega en el rango.';
+					ok=false;
+					break;
+					}
+				if(reg[0]=='ANULADO'){
+				
+					if(cant_remitos==1)
+					{
+						tipo_err=("El remito se encuentra anulado.");
+						ok=false;
+						break;
+					}
+					else
+					{
+					anulados+=1;
+					tipo_err="Se encontraron: ";
+					ok=true;
+					}
+					
+				}		
+							
+				if (reg[0]=='') {
+
+					tipo_err='No se encontraron remitos en ese rango de numeros.';
+					ok=false;
+					break;
+				}
+
+		}//for
+	}//if	
+	
+	if(!ok) {		
+		alert(tipo_err);
+		return false;
+	}else{
+		if(anulados>0)
+		{
+			alert(tipo_err+anulados+' remitos anulados en el rango');
+		}
+		return true;
+	}
+}//Cierro validar remito
+function imprimir_remito() {
+	if (ValidarRem()) {
+		var tipo = (document.getElementById("tipo_remito1").checked ? 'origen' : 'destino');	
+		var campo1= (tipo=='origen' ? 'ori' : 'des');
+		var campo2= (tipo=='origen' ? 'des' : 'ori');
+		var condicion= (tipo=='origen' ? ' where b.REM_FECHA_CIERRE is null' : ' where a.TRA_FECHA_ENTREGA is null');
+	 
+	  document.descarga.sql.value=
+				        "Select a.TRA_DOMINIO, STUFF('0000000', 8-LEN(b.REM_NUMERO), LEN(b.REM_NUMERO), REM_NUMERO) as REM_NUMERO, a.TRA_NRO_VOUCHER, s.REG_COD_INT, s.REG_DESCRIP, r.REG_DESCRIP as REG_DESCRIP_TIT, r.REG_COD_INT  as REG_COD_INT_TIT, "+
+						document.form1.fecharetiro.value+" as TRA_FECHA_RETIRO"+
+						" From TRAMITE a "+
+
+						" Inner Join REMITO b on b.rem_id = a.rem_id_"+campo1+" and b.rem_numero BETWEEN "+document.form1.desde.value+" and "+document.form1.hasta.value+
+						" Inner Join REG_AUTOM r on r.reg_codigo = a.reg_codigo_"+campo1+
+						" Inner Join REG_AUTOM s on s.reg_codigo = a.reg_codigo_"+campo2+condicion+	
+						" Order by b.rem_numero,a.tra_dominio";		  	  
+		//agrego los ceros a numero de remito
+		var des = new String(document.form1.desde.value);
+		var has = new String(document.form1.hasta.value);
+		var ceros = new String("0000000");
+		var cant_ceros = ceros.substr(-(des.length)-1);
+		var desde = cant_ceros+des;
+		var cant_ceros = ceros.substr(-(has.length)-1);
+		var hasta = cant_ceros+has;
+		//fin agrego ceros
+	  	document.descarga.propiedadesreport.value = 
+	  	"PageHeader|4|"+(tipo=='origen' ? 'DEVOLUCION AL ORIGEN' : 'ENVIO A DESTINO')+"\n"+			  			  
+	    "PageHeader|5|"+((tipo=='origen')?(document.form1.copia_duplicado.checked?'DUPLICADO - Para el Correo':'ORIGINAL - Para Registro Origen'):(document.form1.copia_duplicado.checked?'DUPLICADO - Para el Correo':'ORIGINAL - Para Registro Destino'))+"\n"+
+		"PageHeader|8|"+(tipo=='origen' ? 'Registro Origen:' : 'Registro Destino:')+"\n"+
+		//"MainGroup|GroupHeader|1|REMITO-"+"\n"+			  
+	   	"MainGroup|GroupHeader|2|"+(tipo=='origen' ? 'Registro Destino' : 'Registro Origen')+"\n"+
+	   // "MainGroup|GroupHeader|2|"+(tipo=='origen' ? 'Registro Origen:' : 'Registro Destino:')+"\n"+
+		"ReportHeader|4|"+desde+"\n"+														  
+		"ReportHeader|6|"+hasta;
+		/*"MainGroup|GroupHeader|3|"+document.form1.codigo.value+"\n"+
+		"MainGroup|GroupHeader|4|"+document.form1.descripcion.value+"\n"+*/											
+																	
+	    window.open(href='../export/imprime_'+((document.form1.copia_ambos.checked?'ps4':'ps2')+'.php'), this.target, 'width=250,height=140,left=260,top=230,resizable=yes');									
+		document.form1.desde.value='';
+		document.form1.hasta.value='';
+												
+	
+//			  document.descarga.submit();
+		  return true;		
+	}
+}
+function getTramites() {
+	if (ValidarRem()) {
+		// Busqueda AJAX de los tramites
+		document.form1.tram_lista.value = "";
+		updating = true;
+		document.getElementById("loading").style.display = "";
+		var tipo = (document.getElementById("tipo_remito1").checked ? 'origen' : 'destino');
+		http.open("GET", "reimprimirRemito_ajax.php?ajax=detalle&nro_rem=" + document.form1.nro_rem.value+
+						      "&par_registro="+tipo, false);				
+		http.send(null);
+		getHttp();
+
+		if (document.form1.tram_lista.value == "") {
+			document.getElementById("tramites").tBodies[0].innerHTML = "";
+			alert("El remito no incluye ningún trámite");
+			return false;
+		} else {
+			s = "";
+			fondo = 1;
+			regs = document.form1.tram_lista.value.split("\n");
+//alert(regs);			
+			for (i = 0; i < regs.length; i++) {
+				reg = regs[i].split("|");			
+				s += "<tr class=fondotabla" + fondo + "><td class=celdatexto>" + reg[0] + "</td>" +
+				     "<td class=celdatexto>" + reg[1] + "</td></tr>\n";
+				fondo = (fondo == 1 ? 2 : 1);
+			} // end for
+			document.getElementById("tramites").tBodies[0].innerHTML = s;
+			return true;
+		} // end if
+	} else {
+		return false;
+	} // end if validar
+} // end getTramites
+</script>
+</head>
+<body onLoad="document.form1.desde.focus();">
+<?php require_once("../includes/inc_topleft.php"); 
+/* Contenido */
+$pagina="reimprimirRemito.php";
+require_once('../includes/inc_titulo.php');
+?>
+<!-- Form para ingresar numero de remito -->
+<form name="form1" id="form1" action="" method="post" onSubmit="return ValidarRem(document.getElementById('nro_rem').value);">
+<table align="center" width="40%" class="tablaconbordes">
+<tr>
+<th colspan="4" align="center" class="celdatitulo">Ingrese número y tipo de Remito</th>
+</tr>
+<tr>
+<td class="celdatexto" align="center">Origen:<input type="radio" name="tipo_remito" id="tipo_remito1" value="origen"></td>
+<td align="center" class="celdatexto">Destino:<input type="radio" name="tipo_remito" id="tipo_remito2" value="destino" checked="checked"></td>
+</tr>
+<tr>
+<td colspan=4 align="center" class="celdatexto">N° Remito desde: <input type="text" name="desde" id="desde" maxlength="15"><img src="../imagenes/loading.gif" id=loading style="display: none;"></td>
+</tr>
+<tr>
+<td colspan=4 align="center" class="celdatexto">N° Remito hasta: <input type="text" name="hasta" id="hasta" maxlength="15"><img src="../imagenes/loading.gif" id=loading style="display: none;"></td>
+</tr>
+<tr id="copias">
+<td align="center" class="celdatexto" colspan="4">Original:<input type="radio" id="copia_original" name="copia" value="copia_original"> 
+Duplicado:<input type="radio" id="copia_duplicado" name="copia" value="copia_duplicado"> Ambos:<input type="radio" id="copia_ambos" value="copia_ambos" name="copia" checked="checked"></td>
+</tr>
+<tr>
+<td colspan="4" align="center">
+
+<!--<input type=button class=botonout value="Buscar tr&aacute;mites" onClick="getTramites();">-->
+
+<input type=hidden name=remitoconceros>
+<input type=hidden name=codigo>
+<input type=hidden name=descripcion>
+<input type=hidden name=fecharetiro value="<?=$conn->SQLDate(FMT_DATE_DB, 'a.TRA_FECHA_RETIRO');?>">
+<input type="button" class="botonout" name=botimprimir     value="Imprimir"  onMouseOver="this.className = 'botonover';" onMouseOut="this.className = 'botonout';" onClick="imprimir_remito();">
+</td>
+</tr>
+<!--<tr><td class=celdatexto>Tr&aacute;mites incluidos</td>
+	<td><input type=hidden name=tram_lista>
+		<table id="tramites">
+		<thead>
+			<tr><th class=celdatitulo>Dominio</th>
+			    <th class=celdatitulo>Voucher</th></tr>-->
+		</thead>
+		
+</table>
+</form>
+<form action="" method="post" name="descarga">
+<input type="hidden" name="sql">
+<input type="hidden" name="archivo2" value="../tramites/remitoReg.xml">
+<input type="hidden" name="propiedadesreport">
+</form>
+
+<!--Fin Form -->
+<?php require_once("../includes/inc_bottom.php"); ?>
+</body>
+</html>
+<?php
+}//Cierro if de seguridad
+?>

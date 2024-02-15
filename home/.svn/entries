@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="528"
+   name=""
+   committed-date="2006-02-15T17:48:42.939795Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/home"
+   last-author="diegop"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="528"
+   name="index.php"
+   text-time="2006-05-08T14:22:52.734375Z"
+   committed-date="2006-02-15T17:48:42.939795Z"
+   checksum="370bad1c18eb9ec4f0a0c22754421288"
+   last-author="diegop"
+   kind="file"
+   prop-time="2006-05-08T14:22:52.718750Z"/>
+</wc-entries>

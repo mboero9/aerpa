@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="463"
+   name=""
+   committed-date="2006-02-02T14:54:37.270194Z"
+   url="svn://10.254.70.207/aerpa/trunk/site/adodb/session/old"
+   last-author="diegog"
+   kind="dir"
+   uuid="3ea415d8-3505-0410-8928-854c8cb3d62d"
+   revision="673"/>
+<entry
+   committed-rev="463"
+   name="crypt.inc.php"
+   text-time="2006-05-08T14:22:58.968750Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="5a4e4fde0da690423376a99610929101"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.843750Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-session.php"
+   text-time="2006-05-08T14:22:58.968750Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="23df24991d609468cafa22ecf8a2b11f"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.890625Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-cryptsession.php"
+   text-time="2006-05-08T14:22:59.000000Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="d7a2e9eced799c6ab7fe29f41db27d8c"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.921875Z"/>
+<entry
+   committed-rev="463"
+   name="adodb-session-clob.php"
+   text-time="2006-05-08T14:22:59.015625Z"
+   committed-date="2006-02-02T14:54:37.270194Z"
+   checksum="4e6771552683e5c639ec2c6893467098"
+   last-author="diegog"
+   kind="file"
+   prop-time="2006-05-08T14:22:58.937500Z"/>
+</wc-entries>
